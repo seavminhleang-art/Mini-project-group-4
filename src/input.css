@@ -65,6 +65,34 @@ body {
 /* Colors */
 @theme {
     --color-primary: #1D3D50;
-    --color-secondary: #2B9348;
+    --color-secondary: #00BA34;
     --color-accent: #E5E5E5;
+}
+
+/* =========================
+    HOME PAGE EXTRAS
+========================= */
+@layer components {
+    .pulse-dot {
+        animation: pulse-dot 2s infinite;
+    }
+
+    .dot-grid {
+        background-image: radial-gradient(rgba(229, 229, 229, 0.25) 1px, transparent 1px);
+        background-size: 18px 18px;
+    }
+
+    @keyframes pulse-dot {
+        0% {
+            box-shadow: 0 0 0 0 rgba(0, 186, 52, 0.5);
+        }
+
+        70% {
+            box-shadow: 0 0 0 6px rgba(0, 186, 52, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(0, 186, 52, 0);
+        }
+    }
 }
