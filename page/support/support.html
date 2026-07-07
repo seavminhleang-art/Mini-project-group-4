@@ -6,6 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customer Support — Por Express</title>
   <link rel="stylesheet" href="../../src/output.css">
+  <script>
+    // Apply saved / preferred theme before paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="../../src/dark.css">
+  <link rel="stylesheet" href="../../src/custom.css">
+  
+
 </head>
 
 <body class="font-body text-black bg-white antialiased overflow-x-hidden">
@@ -588,6 +603,7 @@
   </footer>
 
   <script src="../../js/support.js" defer></script>
+  
 </body>
 
 </html>
