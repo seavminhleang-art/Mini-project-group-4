@@ -779,6 +779,12 @@
   .border-secondary {
     border-color: var(--color-secondary);
   }
+  .border-secondary\/20 {
+    border-color: color-mix(in srgb, #00BA34 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-secondary) 20%, transparent);
+    }
+  }
   .border-secondary\/30 {
     border-color: color-mix(in srgb, #00BA34 30%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
