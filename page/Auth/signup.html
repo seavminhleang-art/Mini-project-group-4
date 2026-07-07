@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign Up</title>
+
+  <link rel="stylesheet" href="../../src/output.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="min-h-screen flex flex-col md:flex-row overflow-hidden">
+
+  <!-- ================= LEFT IMAGE SECTION ================= -->
+ 
+  <div class="hidden lg:flex lg:w-1/2 items-center justify-center px-10 bg-sm bg-mist-300">
+ 
+    <img src="../images/login_bg.jpg" alt="Food" class="w-full h-auto max-h-[90vh] object-contain rounded-[35px]">
+
+  </div>
+
+
+  <!-- ================= RIGHT SIGN UP SECTION ================= -->
+  <div class="w-full lg:w-1/2 flex items-center justify-center ">
+    <!-- CARD -->
+    <div class="w-full max-w-md px-6 py-6 overflow-y-auto max-h-screen ">
+      <!-- LOGO -->
+      <div class="flex justify-center mb-8">
+        <img src="../images/Logo.png" alt="Logo" class="w-36 md:w-40">
+      </div>
+      <form class="space-y-5">
+        <!-- SOCIAL LOGIN -->
+        <div class="flex gap-4">
+          <button type="button"
+            class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-primary/20 rounded-lg bg-white hover:bg-secondary hover:text-accent transition">
+            <i class="fa-brands fa-google text-red-600"></i>
+            Google
+          </button>
+          <button type="button"
+            class="flex-1 flex items-center justify-center gap-2 py-3 border-2 border-primary/20 rounded-lg bg-white hover:bg-secondary hover:text-accent transition">
+            <i class="fa-brands fa-facebook text-blue-600"></i>
+            Facebook
+          </button>
+        </div>
+
+
+        <!-- NAME -->
+        <div class="flex flex-row gap-4">
+          <div class="flex-1">
+            <label class="block mb-2 text-primary font-medium">
+              First Name
+            </label>
+            <input type="text" placeholder="First Name"
+              class="w-full px-4 py-2.5 rounded-lg border-2 border-primary/20 bg-white focus:outline-none focus:ring-2 focus:ring-secondary">
+
+          </div>
+
+          <div class="flex-1">
+
+            <label class="block mb-2 text-primary font-medium">
+              Last Name
+            </label>
+
+            <input type="text" placeholder="Last Name"
+              class="w-full px-4 py-2.5 rounded-lg border-2 border-primary/20 bg-white focus:outline-none focus:ring-2 focus:ring-secondary">
+
+          </div>
+
+        </div>
+        <!-- EMAIL -->
+        <div>
+
+          <label class="block mb-2 text-primary font-medium">
+            Email
+          </label>
+
+          <input type="email" placeholder="example@gmail.com"
+            class="w-full px-4 py-2.5 rounded-lg border-2 border-primary/20 bg-white focus:outline-none focus:ring-2 focus:ring-secondary">
+
+        </div>
+
+        <!-- PASSWORD -->
+        <div>
+
+          <label class="block mb-2 text-primary font-medium">
+            Password
+          </label>
+
+          <input type="password" placeholder="Password"
+            class="w-full px-4 py-2.5 rounded-lg border-2 border-primary/20 bg-white focus:outline-none focus:ring-2 focus:ring-secondary">
+
+        </div>
+
+
+
+
+
+        <!-- CONFIRM PASSWORD -->
+        <div>
+
+          <label class="block mb-2 text-primary font-medium">
+            Confirm Password
+          </label>
+
+          <input type="password" placeholder="Confirm Password"
+            class="w-full px-4 py-2.5 rounded-lg border-2 border-primary/20 bg-white focus:outline-none focus:ring-2 focus:ring-secondary">
+
+        </div>
+
+        <!-- BUTTON -->
+        <button type="submit"
+          class="w-full py-3 rounded-lg bg-primary text-white text-lg font-semibold hover:bg-secondary transition">
+
+          Sign Up
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
