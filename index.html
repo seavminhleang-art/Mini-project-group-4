@@ -1,12 +1,639 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Por Express — Fast &amp; Reliable Logistics Across Cambodia</title>
   <link rel="stylesheet" href="src/output.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Por Express — Fast &amp; Reliable Logistics Across Cambodia</title>
+  <link rel="stylesheet" href="src/output.css" />
 </head>
+
+<body class="font-body text-black bg-white antialiased overflow-x-hidden">
+
+  <!-- ================= HERO SHELL ================= -->
+  <div class="bg-primary p-4 sm:p-6 pt-4 sm:pt-6">
+    <div class="max-w-[1400px] mx-auto bg-accent rounded-[28px] shadow-[0_40px_90px_-40px_rgba(0,0,0,0.55)] relative">
+
+      <header class="relative z-20 px-4 sm:px-6 pt-4 sm:pt-5">
+        <div class="max-w-[1180px] mx-auto h-20 flex items-center justify-between bg-white rounded-full py-2.5 pr-2.5 pl-5 shadow-[0_12px_30px_-14px_rgba(18,39,51,0.25)]">
+
+          <a href="#" class="flex items-center gap-2 h-full py-3">
+            <span class="block h-full w-44 overflow-hidden">
+              <img src="public/images/PorExpress-Logo.png" alt="Por Express" class="h-full w-full object-cover object-center" onerror="this.parentElement.style.display='none'; this.closest('a').querySelector('span.hidden').style.display='flex'">
+            </span>
+            <span class="hidden items-center gap-2 font-display font-bold text-lg text-primary">
+              <span class="w-6 h-6 rounded-md bg-secondary/15 flex items-center justify-center text-secondary text-xs font-mono">P</span>
+              Por express
+            </span>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1">
+            <a href="#" class="text-sm font-medium text-primary px-3.5 py-2.5 rounded-full">Home</a>
+
+            <div class="nav-item group relative">
+              <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+                Services
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+                <ul class="flex flex-col">
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Shipping Services</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Freight Options</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Warehousing</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Delivery Solutions</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Pricing &amp; Rates</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="nav-item group relative">
+              <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+                Shipments
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+                <ul class="flex flex-col">
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Track Shipment</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Create Shipment</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Shipment History</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Delivery Status</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Invoice &amp; Receipts</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="nav-item group relative">
+              <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+                Company
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+                <ul class="flex flex-col">
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">About Us</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Coverage Areas</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Partners</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Careers</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="nav-item group relative">
+              <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+                Support
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+              </button>
+              <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+                <ul class="flex flex-col">
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Contact Us</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Customer Support</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Live Chat</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Report an Issue</a></li>
+                  <li><a href="#" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <div class="flex items-center gap-4">
+            <a href="page/Auth/Auth.html" class="text-sm font-medium text-primary/75 hover:text-primary px-1 py-2.5">Login</a>
+            <a href="#" class="inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5.5 py-3 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(18,39,51,0.5)] transition-shadow whitespace-nowrap">Get Started</a>
+          </div>
+        </div>
+      </header>
+
+      <div class="relative z-10 text-center px-6 pt-12 sm:pt-14 pb-2 max-w-[880px] mx-auto">
+        <span class="inline-flex items-center gap-2 font-mono text-[11.5px] uppercase tracking-wide text-primary bg-secondary/20 border border-secondary/30 px-3.5 py-1.5 rounded-full mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary pulse-dot"></span>
+          Live tracking on every shipment
+        </span>
+        <h1 class="font-display font-bold text-[clamp(34px,5vw,58px)] leading-[1.08] tracking-tight text-primary mb-5">
+          Fast &amp; Reliable <span class="text-secondary">Logistic</span><br>Across Cambodia
+        </h1>
+        <p class="font-body text-base leading-relaxed text-black/55 max-w-[520px] mx-auto mb-8">
+          Track shipments in real time, manage deliveries, and ship worldwide with confidence.
+        </p>
+        <div class="flex items-center justify-center gap-3.5 flex-wrap mb-2">
+          <a href="page/shipment/shipment.html" class="inline-flex items-center justify-center font-semibold text-[15px] text-white bg-primary px-7 py-3.5 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(18,39,51,0.5)] transition-shadow">Get in touch</a>
+          <a href="page/shipment/shipment.html" class="inline-flex items-center justify-center font-semibold text-[15px] text-primary border-[1.5px] border-primary px-7 py-3.5 rounded-full hover:bg-primary hover:text-white transition-colors">Track a Shipment</a>
+        </div>
+      </div>
+
+      <div class="relative max-w-[1180px] mx-auto px-5 pt-14">
+        <img src="public/images/hero-section.png" alt="Por Express shipping yard illustration" class="w-full h-auto rounded-2xl"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="hidden aspect-[900/300] rounded-2xl border-2 border-dashed border-primary/25 bg-white/40 flex-col items-center justify-center gap-2 text-primary/50">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-9 h-9"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M3 7l3-4h12l3 4"/></svg>
+          <p class="font-mono text-xs uppercase tracking-wide">Hero illustration placeholder — swap in exported artwork</p>
+        </div>
+      </div>
+      <div class="h-8 sm:h-10"></div>
+    </div>
+  </div>
+
+  <!-- ================= QUICK ACTIONS ================= -->
+  <section class="relative z-30 -mt-9">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="bg-white rounded-2xl p-6 flex flex-col gap-3.5 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] border border-primary/5 hover:-translate-y-1 hover:shadow-[0_26px_50px_-26px_rgba(18,39,51,0.3)] transition">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-base text-primary">Track a Shipment</h3>
+          <p class="text-[13.5px] leading-relaxed text-black/55">Enter a waybill or order number for live status and location.</p>
+          <a href="page/shipment/shipment.html" class="mt-auto font-mono text-xs font-medium text-secondary inline-flex items-center gap-1.5">Track now
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 flex flex-col gap-3.5 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] border border-primary/5 hover:-translate-y-1 hover:shadow-[0_26px_50px_-26px_rgba(18,39,51,0.3)] transition">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><path d="M9 12h6M9 16h6M9 8h6M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-base text-primary">Get a Quote</h3>
+          <p class="text-[13.5px] leading-relaxed text-black/55">Instant rates by weight and distance — no phone call needed.</p>
+          <a href="#" class="mt-auto font-mono text-xs font-medium text-secondary inline-flex items-center gap-1.5">Start a quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 flex flex-col gap-3.5 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] border border-primary/5 hover:-translate-y-1 hover:shadow-[0_26px_50px_-26px_rgba(18,39,51,0.3)] transition">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><rect x="3" y="7" width="13" height="10" rx="1"/><path d="M16 10h3l2 3v4h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-base text-primary">Schedule a Pickup</h3>
+          <p class="text-[13.5px] leading-relaxed text-black/55">Book a collection window at your shop, home, or warehouse.</p>
+          <a href="#" class="mt-auto font-mono text-xs font-medium text-secondary inline-flex items-center gap-1.5">Book pickup
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 flex flex-col gap-3.5 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] border border-primary/5 hover:-translate-y-1 hover:shadow-[0_26px_50px_-26px_rgba(18,39,51,0.3)] transition">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-base text-primary">Find a Location</h3>
+          <p class="text-[13.5px] leading-relaxed text-black/55">Locate the nearest Por Express depot or drop-off point.</p>
+          <a href="#" class="mt-auto font-mono text-xs font-medium text-secondary inline-flex items-center gap-1.5">View map
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRACKING DEMO ================= -->
+  <section class="bg-accent py-24 sm:py-28" id="shipments">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+      <div>
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Real-time visibility</span>
+        <h2 class="font-display font-bold text-[clamp(26px,2.8vw,34px)] leading-tight text-primary mb-4">Watch your shipment move, not just wonder where it is</h2>
+        <p class="text-[15.5px] leading-relaxed text-black/55 max-w-[460px] mb-5.5">Every parcel gets a waybill number the moment it's booked. Follow it through pickup, transit, and delivery — the same view we use internally, right on your screen.</p>
+        <ul class="flex flex-col gap-3">
+          <li class="flex items-center gap-2.5 text-sm font-medium text-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-[18px] h-[18px] text-secondary shrink-0"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Live status updates at every checkpoint
+          </li>
+          <li class="flex items-center gap-2.5 text-sm font-medium text-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-[18px] h-[18px] text-secondary shrink-0"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            SMS &amp; Telegram alerts when status changes
+          </li>
+          <li class="flex items-center gap-2.5 text-sm font-medium text-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-[18px] h-[18px] text-secondary shrink-0"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+            Digital proof of delivery, timestamped
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-white rounded-[20px] p-7 shadow-[0_30px_70px_-35px_rgba(18,39,51,0.35)]">
+        <div class="flex justify-between items-center mb-6">
+          <div class="font-mono text-xs text-black/50">Waybill<strong class="block text-primary text-[15px] mt-0.5">PX-208841</strong></div>
+          <span class="font-mono text-[11px] font-semibold text-secondary bg-secondary/15 px-3 py-1.5 rounded-full">In transit</span>
+        </div>
+
+        <div class="relative my-8 mx-1">
+          <div class="absolute top-[11px] left-[11px] right-[11px] h-0.5 bg-primary/10"></div>
+          <div class="absolute top-[11px] left-[11px] h-0.5 bg-secondary" style="width:60%"></div>
+          <div class="flex justify-between relative">
+            <div class="flex flex-col items-center gap-2.5 w-[70px]">
+              <div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center z-[2]"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-[11px] h-[11px]"><path d="M5 13l4 4L19 7"/></svg></div>
+              <span class="text-[11.5px] font-semibold text-primary text-center">Booked</span>
+            </div>
+            <div class="flex flex-col items-center gap-2.5 w-[70px]">
+              <div class="w-6 h-6 rounded-full bg-secondary flex items-center justify-center z-[2]"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-[11px] h-[11px]"><path d="M5 13l4 4L19 7"/></svg></div>
+              <span class="text-[11.5px] font-semibold text-primary text-center">Picked Up</span>
+            </div>
+            <div class="flex flex-col items-center gap-2.5 w-[70px]">
+              <div class="w-6 h-6 rounded-full bg-white border-2 border-secondary shadow-[0_0_0_4px_rgba(0,186,52,0.25)] z-[2]"></div>
+              <span class="text-[11.5px] font-semibold text-primary text-center">In Transit</span>
+            </div>
+            <div class="flex flex-col items-center gap-2.5 w-[70px]">
+              <div class="w-6 h-6 rounded-full bg-white border-2 border-primary/20 z-[2]"></div>
+              <span class="text-[11.5px] font-semibold text-black/50 text-center">Delivered</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3.5 border-t border-dashed border-primary/15 pt-5">
+          <div><span class="block font-mono text-[10px] uppercase tracking-wide text-black/50 mb-1">From</span><strong class="font-mono text-[13px] font-semibold text-primary">Phnom Penh</strong></div>
+          <div><span class="block font-mono text-[10px] uppercase tracking-wide text-black/50 mb-1">To</span><strong class="font-mono text-[13px] font-semibold text-primary">Siem Reap</strong></div>
+          <div><span class="block font-mono text-[10px] uppercase tracking-wide text-black/50 mb-1">ETA</span><strong class="font-mono text-[13px] font-semibold text-primary">Today, 6:40 PM</strong></div>
+          <div><span class="block font-mono text-[10px] uppercase tracking-wide text-black/50 mb-1">Courier</span><strong class="font-mono text-[13px] font-semibold text-primary">Sok Dara</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COVERAGE MAP ================= -->
+  <section class="bg-white py-24 sm:py-28" id="company">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 grid grid-cols-1 md:grid-cols-[1fr_1.1fr] gap-10 md:gap-12 items-center">
+      <div>
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Coverage</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-4">Wherever your customer is in Cambodia, we can reach them</h2>
+        <p class="text-base leading-relaxed text-black/55 max-w-[460px] mb-6.5">From Phnom Penh's city center to provincial towns, Por Express routes through a growing network of depots — so "accessible" isn't just a promise, it's a route on the map.</p>
+        <ul class="grid grid-cols-2 gap-3 max-w-[380px]">
+          <li class="flex items-center gap-2 font-mono text-xs text-primary"><span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>Phnom Penh</li>
+          <li class="flex items-center gap-2 font-mono text-xs text-primary"><span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>Siem Reap</li>
+          <li class="flex items-center gap-2 font-mono text-xs text-primary"><span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>Battambang</li>
+          <li class="flex items-center gap-2 font-mono text-xs text-primary"><span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>Sihanoukville</li>
+          <li class="flex items-center gap-2 font-mono text-xs text-primary"><span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>Kampong Cham</li>
+          <li class="flex items-center gap-2 font-mono text-xs text-primary"><span class="w-1.5 h-1.5 rounded-full bg-secondary shrink-0"></span>Pursat</li>
+        </ul>
+      </div>
+
+      <div class="bg-primary dot-grid rounded-[20px] p-9 relative overflow-hidden min-h-[380px]">
+        <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" class="relative z-[2] w-full h-auto">
+          <g stroke="rgba(0,186,52,0.5)" stroke-width="1.5" stroke-dasharray="3 5">
+            <line x1="320" y1="190" x2="250" y2="70" />
+            <line x1="320" y1="190" x2="390" y2="100" />
+            <line x1="320" y1="190" x2="90" y2="120" />
+            <line x1="320" y1="190" x2="190" y2="155" />
+            <line x1="320" y1="190" x2="250" y2="280" />
+          </g>
+          <circle cx="320" cy="190" r="9" fill="#00BA34" />
+          <circle cx="320" cy="190" r="16" fill="none" stroke="#00BA34" stroke-width="1.5" opacity="0.5" />
+          <text x="320" y="215" text-anchor="middle" fill="#E5E5E5" font-family="IBM Plex Mono, monospace" font-size="11">Phnom Penh</text>
+          <circle cx="250" cy="70" r="6" fill="#E5E5E5" />
+          <text x="250" y="56" text-anchor="middle" fill="#E5E5E5" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.8">Siem Reap</text>
+          <circle cx="390" cy="100" r="6" fill="#E5E5E5" />
+          <text x="390" y="86" text-anchor="middle" fill="#E5E5E5" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.8">Kampong Cham</text>
+          <circle cx="90" cy="120" r="6" fill="#E5E5E5" />
+          <text x="90" y="106" text-anchor="middle" fill="#E5E5E5" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.8">Battambang</text>
+          <circle cx="190" cy="155" r="6" fill="#E5E5E5" />
+          <text x="190" y="141" text-anchor="middle" fill="#E5E5E5" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.8">Pursat</text>
+          <circle cx="250" cy="280" r="6" fill="#E5E5E5" />
+          <text x="250" y="300" text-anchor="middle" fill="#E5E5E5" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.8">Sihanoukville</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="bg-accent py-24 sm:py-28" id="services">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-[640px] mb-14">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Services</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-3.5">One courier, every kind of delivery</h2>
+        <p class="text-base leading-relaxed text-black/55">From a single parcel across town to a full pallet across the country, Por Express handles the route and keeps you posted the whole way.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="font-mono text-[11px] text-black/50 opacity-70 mb-5.5">SVC · 01</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-[26px] h-[26px] text-secondary mb-4.5"><rect x="1" y="10" width="14" height="7"/><path d="M15 13h4l3 3v1h-7"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Ground Delivery</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Same-day and next-day delivery across Phnom Penh and nationwide routes.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Explore ground delivery →</a>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="font-mono text-[11px] text-black/50 opacity-70 mb-5.5">SVC · 02</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-[26px] h-[26px] text-secondary mb-4.5"><path d="M3 7h18v13H3z"/><path d="M3 7l3-4h12l3 4M8 12h3M8 15h3"/></svg>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Warehousing</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Short and long-term storage with pick-and-pack for growing sellers.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Explore warehousing →</a>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="font-mono text-[11px] text-black/50 opacity-70 mb-5.5">SVC · 03</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-[26px] h-[26px] text-secondary mb-4.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Live Tracking</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">A waybill number and live status on every shipment, no exceptions.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Explore tracking →</a>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="font-mono text-[11px] text-black/50 opacity-70 mb-5.5">SVC · 04</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-[26px] h-[26px] text-secondary mb-4.5"><path d="M9 12h6M9 16h6M9 8h6M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Cash on Delivery</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Customers pay when the parcel arrives — you get settled the next cycle.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Explore COD →</a>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="font-mono text-[11px] text-black/50 opacity-70 mb-5.5">SVC · 05</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-[26px] h-[26px] text-secondary mb-4.5"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Provincial Coverage</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Depots and partner routes reaching towns beyond the capital.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Explore coverage →</a>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="font-mono text-[11px] text-black/50 opacity-70 mb-5.5">SVC · 06</div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-[26px] h-[26px] text-secondary mb-4.5"><path d="M9 12l2 2 4-4"/><path d="M4 4h16v16H4z"/></svg>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Business Accounts</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Bulk booking, invoicing, and a dashboard built for shop owners.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Explore business accounts →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACCESSIBILITY FEATURES ================= -->
+  <section class="bg-white py-24 sm:py-28">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-[640px] mx-auto text-center mb-14">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Built to be accessible</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-3.5">Shipping shouldn't require an app store and a credit card</h2>
+        <p class="text-base leading-relaxed text-black/55">We meet people where they already are — on the phone, on Telegram, paying cash when the parcel shows up.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="text-center p-8.5 rounded-2xl bg-accent">
+          <div class="w-13 h-13 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-secondary"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-[15.5px] text-primary mb-2">Cash on Delivery</h3>
+          <p class="text-[13px] leading-relaxed text-black/55">No card or bank account needed — pay when it arrives.</p>
+        </div>
+        <div class="text-center p-8.5 rounded-2xl bg-accent">
+          <div class="w-13 h-13 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-secondary"><path d="M21 11.5a8.4 8.4 0 01-8.4 8.4 8.6 8.6 0 01-4.1-1L3 20l1.1-5.6a8.4 8.4 0 1116.9-2.9z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-[15.5px] text-primary mb-2">Book by Telegram or Phone</h3>
+          <p class="text-[13px] leading-relaxed text-black/55">Message us or call — you don't need the website to ship.</p>
+        </div>
+        <div class="text-center p-8.5 rounded-2xl bg-accent">
+          <div class="w-13 h-13 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-secondary"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 010 18 13 13 0 010-18z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-[15.5px] text-primary mb-2">Khmer &amp; English Support</h3>
+          <p class="text-[13px] leading-relaxed text-black/55">Talk to our team in the language you're most comfortable in.</p>
+        </div>
+        <div class="text-center p-8.5 rounded-2xl bg-accent">
+          <div class="w-13 h-13 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-secondary"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-[15.5px] text-primary mb-2">Instant Price Calculator</h3>
+          <p class="text-[13px] leading-relaxed text-black/55">Enter weight and distance, get a quote — no waiting on a callback.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATISTICS ================= -->
+  <section class="bg-primary py-24 sm:py-28">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-7 gap-y-9">
+        <div class="lg:border-l lg:border-white/15 lg:pl-7 lg:first:border-l-0 lg:first:pl-0">
+          <div class="font-mono font-semibold text-[clamp(32px,4vw,48px)] text-secondary leading-none mb-3">25</div>
+          <div class="text-sm font-medium text-white mb-1.5">Provinces &amp; cities covered</div>
+          <div class="text-[12.5px] text-accent/55">and growing every quarter</div>
+        </div>
+        <div class="lg:border-l lg:border-white/15 lg:pl-7">
+          <div class="font-mono font-semibold text-[clamp(32px,4vw,48px)] text-secondary leading-none mb-3">42,000+</div>
+          <div class="text-sm font-medium text-white mb-1.5">Deliveries completed</div>
+          <div class="text-[12.5px] text-accent/55">Since launch</div>
+        </div>
+        <div class="lg:border-l lg:border-white/15 lg:pl-7">
+          <div class="font-mono font-semibold text-[clamp(32px,4vw,48px)] text-secondary leading-none mb-3">97.4%</div>
+          <div class="text-sm font-medium text-white mb-1.5">On-time delivery rate</div>
+          <div class="text-[12.5px] text-accent/55">Measured against quoted ETA</div>
+        </div>
+        <div class="lg:border-l lg:border-white/15 lg:pl-7">
+          <div class="font-mono font-semibold text-[clamp(32px,4vw,48px)] text-secondary leading-none mb-3">24/7</div>
+          <div class="text-sm font-medium text-white mb-1.5">Customer support</div>
+          <div class="text-[12.5px] text-accent/55">Telegram, phone, or live chat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="bg-accent py-24 sm:py-28">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-[640px] mb-14">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">How it works</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-3.5">From booking to signature, four steps</h2>
+        <p class="text-base leading-relaxed text-black/55">A shipment moves through the same checkpoints every time — so you always know exactly where yours stands.</p>
+      </div>
+
+      <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9 lg:gap-6">
+        <div class="hidden lg:block absolute top-[19px] left-0 right-0 h-px bg-[repeating-linear-gradient(90deg,rgba(18,39,51,0.2)_0_60%,transparent_0_100%)] bg-[length:14px_1px]"></div>
+
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-secondary border-[1.5px] border-secondary flex items-center justify-center font-mono text-sm font-semibold text-white mb-5.5 relative z-[2]">1</div>
+          <h3 class="font-display font-semibold text-base text-primary mb-2">Book it your way</h3>
+          <p class="text-[13.5px] leading-relaxed text-black/55">Online, by phone, or on Telegram — whichever's easiest for you.</p>
+        </div>
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-white border-[1.5px] border-primary/20 flex items-center justify-center font-mono text-sm font-semibold text-primary mb-5.5 relative z-[2]">2</div>
+          <h3 class="font-display font-semibold text-base text-primary mb-2">We pick it up</h3>
+          <p class="text-[13.5px] leading-relaxed text-black/55">A rider arrives at your chosen window and confirms pickup on the spot.</p>
+        </div>
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-white border-[1.5px] border-primary/20 flex items-center justify-center font-mono text-sm font-semibold text-primary mb-5.5 relative z-[2]">3</div>
+          <h3 class="font-display font-semibold text-base text-primary mb-2">Track it live</h3>
+          <p class="text-[13.5px] leading-relaxed text-black/55">Follow every checkpoint with real-time status and an honest ETA.</p>
+        </div>
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-white border-[1.5px] border-primary/20 flex items-center justify-center font-mono text-sm font-semibold text-primary mb-5.5 relative z-[2]">4</div>
+          <h3 class="font-display font-semibold text-base text-primary mb-2">Delivered &amp; paid</h3>
+          <p class="text-[13.5px] leading-relaxed text-black/55">Signed proof of delivery, and cash collected on the spot if that's the plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="bg-white py-24 sm:py-28" id="support">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-[640px] mx-auto text-center mb-14">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">What people say</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary">Small businesses running on Por Express</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+
+        <div class="bg-accent rounded-2xl p-7.5 flex flex-col gap-4.5">
+          <div class="flex gap-1">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          </div>
+          <p class="text-[14.5px] leading-relaxed text-primary">"I run a small shop in Siem Reap and used to lose track of stock shipments constantly. Now I just check the link — I always know when it's arriving."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-9.5 h-9.5 rounded-full bg-black/15 shrink-0 overflow-hidden">
+              <img src="./public/images/RatanaOudomPF.jpg" alt="Ratana Oudom" class="w-full h-full object-cover" onerror="this.style.display='none'">
+            </div>
+            <div><strong class="block text-[13.5px] text-primary">Ratana Oudom</strong><span class="text-xs text-black/50">Shop owner, Siem Reap</span></div>
+          </div>
+        </div>
+
+        <div class="bg-accent rounded-2xl p-7.5 flex flex-col gap-4.5">
+          <div class="flex gap-1">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          </div>
+          <p class="text-[14.5px] leading-relaxed text-primary">"Being able to book through Telegram instead of an app made this so much easier for my staff. Cash on delivery closed the deal for us too."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-9.5 h-9.5 rounded-full bg-black/15 shrink-0 overflow-hidden">
+              <img src="./public/images/LyhengPF.jpg" alt="Cheak Ching Lyheng" class="w-full h-full object-cover" onerror="this.style.display='none'">
+            </div>
+            <div><strong class="block text-[13.5px] text-primary">Cheak Ching Lyheng</strong><span class="text-xs text-black/50">Cafe owner, Battambang</span></div>
+          </div>
+        </div>
+
+        <div class="bg-accent rounded-2xl p-7.5 flex flex-col gap-4.5">
+          <div class="flex gap-1">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-[15px] h-[15px] text-secondary"><path d="M10 1l2.6 5.9 6.4.6-4.8 4.3 1.4 6.2L10 14.9l-5.6 3.1 1.4-6.2L1 7.5l6.4-.6z"/></svg>
+          </div>
+          <p class="text-[14.5px] leading-relaxed text-primary">"We ship to Pursat and Sihanoukville weekly. Por Express is the only courier that actually reaches both without a three-day delay."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <div class="w-9.5 h-9.5 rounded-full bg-black/15 shrink-0 overflow-hidden">
+              <img src="public/images/SrengChipor.jpg" alt="Sreng Chipor" class="w-full h-full object-cover" onerror="this.style.display='none'">
+            </div>
+            <div><strong class="block text-[13.5px] text-primary">Sreng Chipor</strong><span class="text-xs text-black/50">Distributor, Phnom Penh</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA STRIP ================= -->
+  <section class="bg-primary py-16">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 flex items-center justify-between gap-6 flex-wrap">
+      <h3 class="font-display font-bold text-2xl text-white max-w-[480px]">Ready to ship smarter across Cambodia?</h3>
+      <div class="flex gap-3.5 flex-wrap">
+        <a href="#" class="inline-flex items-center justify-center font-semibold text-[15px] text-white bg-secondary px-7 py-3.5 rounded-full hover:shadow-[0_8px_20px_-6px_rgba(0,186,52,0.45)] transition-shadow">Get Started</a>
+        <a href="page/support/support.html" class="inline-flex items-center justify-center font-semibold text-[15px] text-white border-[1.5px] border-white/40 px-7 py-3.5 rounded-full hover:border-secondary hover:text-secondary transition-colors">Talk to Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-primary pt-20">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-10 pb-15 border-b border-white/12">
+
+        <div>
+          <a href="#" class="flex items-center gap-2 mb-4">
+            <img src="public/images/PorExpress-Logo.png" alt="Por Express" class="h-24 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <span class="hidden items-center gap-2 font-display font-bold text-lg text-white">
+              <span class="w-6 h-6 rounded-md bg-secondary/25 flex items-center justify-center text-secondary text-xs font-mono">P</span>
+              Por express
+            </span>
+          </a>
+          <p class="text-[13.5px] leading-relaxed text-accent/60 max-w-65 mb-5.5">Por Express is committed to delivering fast, secure, and reliable logistics solutions across Cambodia.</p>
+          <div class="flex gap-2.5">
+            <a href="#" aria-label="Facebook" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><path d="M22 4.01c-.8.36-1.66.6-2.56.71a4.4 4.4 0 001.94-2.43 8.8 8.8 0 01-2.8 1.07 4.4 4.4 0 00-7.5 4.01A12.5 12.5 0 013 3.13a4.4 4.4 0 001.36 5.87 4.4 4.4 0 01-2-.55v.06a4.4 4.4 0 003.53 4.31 4.4 4.4 0 01-2 .08 4.4 4.4 0 004.1 3.05A8.8 8.8 0 012 17.54a12.4 12.4 0 006.72 1.97c8.06 0 12.47-6.68 12.47-12.47l-.01-.57A8.9 8.9 0 0022 4.01z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 014 0V17m0 0v-4.5"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4.5">Payment Methods</h4>
+          <ul class="flex flex-col gap-3">
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">PayPal</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Mobile Money</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Visa</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Mastercard</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Bank Transfer</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4.5">Services</h4>
+          <ul class="flex flex-col gap-3">
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Parcel Tracking</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">International Shipping</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Express Delivery</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Freight Services</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Local Delivery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4.5">Quick</h4>
+          <ul class="flex flex-col gap-3">
+            <li><a href="index.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Home</a></li>
+            <li><a href="page/service/service.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Services</a></li>
+            <li><a href="page/shipment/shipment.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Shipments</a></li>
+            <li><a href="page/company/company.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Company</a></li>
+            <li><a href="page/support/support.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4.5">Contact us</h4>
+          <ul class="flex flex-col gap-3 mb-6">
+            <li class="text-sm text-accent/75">porexpress@gmail.com</li>
+            <li class="text-sm text-accent/75">+855 123 456 789</li>
+            <li class="text-sm text-accent/75">Veng Sreng, Phnom Penh, Cambodia</li>
+          </ul>
+          <h4 class="font-mono font-bold text-[11.5px] uppercase tracking-wide text-white mb-3">Sponsored and recognized by</h4>
+          <a href="#" class="flex items-center gap-2 opacity-90 hover:opacity-100 transition">
+            <img src="public/images/istad-logo.png" alt="ISTAD — Institute of Science and Technology Advanced Development" class="h-16 w-auto" onerror="this.style.display='none'">
+            <span class="font-display font-bold text-white text-lg"></span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="flex justify-between items-center py-6.5 flex-wrap gap-3">
+        <p class="font-mono text-[12.5px] text-accent/45">Copyright © 2026 Por Express Ltd.co</p>
+        <div class="flex gap-5.5 flex-wrap items-center text-[12.5px] text-accent/45">
+          <span>All Rights Reserved</span>
+          <a href="#" class="hover:opacity-80">Terms and Conditions</a>
+          <a href="#" class="hover:opacity-80">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/home.js" defer></script>
 
 <body class="font-body text-black bg-white antialiased overflow-x-hidden">
 
