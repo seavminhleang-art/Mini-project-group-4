@@ -5,21 +5,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Por Express — Fast &amp; Reliable Logistics Across Cambodia</title>
+  <link rel="icon" type="image/png" href="public/images/PorExpressLOGO.png" />
+  <link rel="apple-touch-icon" href="public/images/PorExpressLOGO.png" />
+  <script>
+    // Apply saved / preferred theme before paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="src/output.css" />
+  <link rel="stylesheet" href="src/custom.css" />
+  <link rel="stylesheet" href="src/dark.css" />
 </head>
 
 <body class="font-body text-black bg-white antialiased overflow-x-hidden">
 
-  <!-- ================= HERO SHELL ================= -->
+  <!-- ============================================================
+        TOP SHELL — rounded panel that holds the navbar + hero
+  ============================================================ -->
   <div class="bg-primary p-4 sm:p-6 pt-4 sm:pt-6">
     <div class="max-w-[1400px] mx-auto bg-accent rounded-[28px] shadow-[0_40px_90px_-40px_rgba(0,0,0,0.55)] relative">
 
+      <!-- ==================== NAVBAR ==================== -->
       <header class="relative z-20 px-4 sm:px-6 pt-4 sm:pt-5">
         <div class="max-w-[1180px] mx-auto h-20 flex items-center justify-between bg-white rounded-full py-2.5 pr-2.5 pl-5 shadow-[0_12px_30px_-14px_rgba(18,39,51,0.25)]">
 
-          <a href="#" class="flex items-center gap-2 h-full py-3">
-            <span class="block h-full w-44 overflow-hidden">
-              <img src="public/images/PorExpress-Logo.png" alt="Por Express" class="h-full w-full object-cover object-center" onerror="this.parentElement.style.display='none'; this.closest('a').querySelector('span.hidden').style.display='flex'">
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-2 h-full py-2 shrink-0">
+            <span class="block h-12 sm:h-14 w-36 sm:w-44">
+              <img src="public/images/PorExpress-Logo.png" alt="Por Express" class="h-full w-full object-contain object-left" onerror="this.parentElement.style.display='none'; this.closest('a').querySelector('span.hidden').style.display='flex'">
             </span>
             <span class="hidden items-center gap-2 font-display font-bold text-lg text-primary">
               <span class="w-6 h-6 rounded-md bg-secondary/15 flex items-center justify-center text-secondary text-xs font-mono">P</span>
@@ -27,6 +46,7 @@
             </span>
           </a>
 
+          <!-- Desktop nav -->
           <nav class="hidden lg:flex items-center gap-1">
             <a href="#" class="text-sm font-medium text-primary px-3.5 py-2.5 rounded-full">Home</a>
 
@@ -95,13 +115,39 @@
             </div>
           </nav>
 
-          <div class="flex items-center gap-4">
-            <a href="page/Auth/Auth.html" class="text-sm font-medium text-primary/75 hover:text-primary px-1 py-2.5">Login</a>
-            <a href="#" class="inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5.5 py-3 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(18,39,51,0.5)] transition-shadow whitespace-nowrap">Get Started</a>
+          <!-- Actions: dark-mode toggle, login, CTA, mobile menu button -->
+          <div class="flex items-center gap-1.5 sm:gap-3">
+            <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-accent transition-colors">
+              <svg class="theme-moon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              <svg class="theme-sun w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            </button>
+            <a href="page/Auth/Auth.html" class="hidden lg:inline-block text-sm font-medium text-primary/75 hover:text-primary px-1 py-2.5">Login</a>
+            <a href="#" class="hidden lg:inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5.5 py-3 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(18,39,51,0.5)] transition-shadow whitespace-nowrap">Get Started</a>
+            <button id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-accent transition-colors">
+              <svg class="nav-open w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+              <svg class="nav-close w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
           </div>
         </div>
-      </header>
 
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:hidden hidden max-w-[1180px] mx-auto mt-2 bg-white rounded-2xl p-3 shadow-[0_20px_45px_-20px_rgba(18,39,51,0.35)]">
+          <nav class="flex flex-col">
+            <a href="#" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Home</a>
+            <a href="#services" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Services</a>
+            <a href="#shipments" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Shipments</a>
+            <a href="#company" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Company</a>
+            <a href="#support" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Support</a>
+            <div class="h-px bg-primary/10 my-2"></div>
+            <a href="page/Auth/Auth.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Login</a>
+            <a href="#" class="mt-1 inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5 py-3 rounded-full">Get Started</a>
+          </nav>
+        </div>
+      </header>
+      <!-- ==================== /NAVBAR ==================== -->
+
+      <!-- ==================== HERO ==================== -->
+      <!-- Hero copy -->
       <div class="relative z-10 text-center px-6 pt-12 sm:pt-14 pb-2 max-w-[880px] mx-auto">
         <span class="inline-flex items-center gap-2 font-mono text-[11.5px] uppercase tracking-wide text-primary bg-secondary/20 border border-secondary/30 px-3.5 py-1.5 rounded-full mb-6">
           <span class="w-1.5 h-1.5 rounded-full bg-secondary pulse-dot"></span>
@@ -119,6 +165,7 @@
         </div>
       </div>
 
+      <!-- Hero image -->
       <div class="relative max-w-[1180px] mx-auto px-5 pt-14">
         <img src="public/images/hero-section.png" alt="Por Express shipping yard illustration" class="w-full h-auto rounded-2xl"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
@@ -128,6 +175,7 @@
         </div>
       </div>
       <div class="h-8 sm:h-10"></div>
+      <!-- ==================== /HERO ==================== -->
     </div>
   </div>
 
@@ -263,8 +311,8 @@
         </ul>
       </div>
 
-      <div class="bg-primary dot-grid rounded-[20px] p-9 relative overflow-hidden min-h-[380px]">
-        <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" class="relative z-[2] w-full h-auto">
+      <div class="coverage-map bg-primary dot-grid rounded-[20px] p-9 relative overflow-hidden min-h-[380px]">
+        <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" class="relative z-[2] w-full h-auto max-w-[520px]">
           <g stroke="rgba(0,186,52,0.5)" stroke-width="1.5" stroke-dasharray="3 5">
             <line x1="320" y1="190" x2="250" y2="70" />
             <line x1="320" y1="190" x2="390" y2="100" />
@@ -608,10 +656,9 @@
             <li class="text-sm text-accent/75">+855 123 456 789</li>
             <li class="text-sm text-accent/75">Veng Sreng, Phnom Penh, Cambodia</li>
           </ul>
-          <h4 class="font-mono font-bold text-[11.5px] uppercase tracking-wide text-white mb-3">Sponsored and recognized by</h4>
-          <a href="#" class="flex items-center gap-2 opacity-90 hover:opacity-100 transition">
-            <img src="public/images/istad-logo.png" alt="ISTAD — Institute of Science and Technology Advanced Development" class="h-16 w-auto" onerror="this.style.display='none'">
-            <span class="font-display font-bold text-white text-lg"></span>
+          <h4 class="font-display text-xs font-semibold uppercase tracking-wide text-white mb-3">Sponsored &amp; recognized by</h4>
+          <a href="#" aria-label="ISTAD — Institute of Science and Technology Advanced Development" class="sponsor-badge">
+            <img src="public/images/istad-logo.png" alt="ISTAD — Institute of Science and Technology Advanced Development" class="h-11 w-auto" onerror="this.style.display='none'">
           </a>
         </div>
 
@@ -629,6 +676,7 @@
   </footer>
 
   <script src="js/home.js" defer></script>
+  <script src="js/ui.js" defer></script>
 </body>
 
 </html>
