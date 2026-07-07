@@ -1,90 +1,189 @@
-<!-- <!doctype html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../../src/output.css" />
-  </head>
-  <body>
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-      <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
-          src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-          alt="Your Company"
-          class="mx-auto h-10 w-auto"
-        />
-        <h2
-          class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-white"
-        >
-          Sign in to your account
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login</title>
+
+  <link rel="stylesheet" href="../../src/output.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<body class="min-h-screen flex flex-col md:flex-row overflow-hidden">
+
+
+  <!-- ================= LEFT IMAGE SECTION ================= -->
+
+  <div class="hidden lg:flex lg:w-1/2 items-center justify-center px-10 bg-sm bg-mist-300">
+
+    <img src="../images/login_bg.jpg" alt="Food"
+      class="w-full h-auto max-h-[90vh] object-contain rounded-[35px]">
+
+  </div>
+
+
+
+  <!-- ================= LOGIN SECTION ================= -->
+
+  <div class="w-full lg:w-1/2 flex items-center justify-center">
+
+
+    <!-- CARD -->
+
+    <div class="w-full max-w-md px-6 py-6">
+
+
+      <!-- LOGO -->
+
+      <div class="flex justify-center mb-4">
+
+        <img src="../images/Logo.png" alt="Logo" class="w-36 md:w-40">
+
+      </div>
+
+
+      <!-- WELCOME TEXT -->
+
+      <div class="text-center mb-8">
+
+        <h2 class="text-primary text-xl font-semibold">
+          Welcome Back
         </h2>
-      </div>
 
-      <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form action="#" method="POST" class="space-y-6">
-          <div>
-            <label for="email" class="block text-sm/6 font-medium text-gray-100"
-              >Email address</label
-            >
-            <div class="mt-2">
-              <input
-                id="email"
-                type="email"
-                name="email"
-                required
-                autocomplete="email"
-                class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
-              />
-            </div>
-          </div>
-
-          <div>
-            <div class="flex items-center justify-between">
-              <label
-                for="password"
-                class="block text-sm/6 font-medium text-gray-100"
-                >Password</label
-              >
-              <div class="text-sm">
-                <a
-                  href="#"
-                  class="font-semibold text-indigo-400 hover:text-indigo-300"
-                  >Forgot password?</a
-                >
-              </div>
-            </div>
-            <div class="mt-2">
-              <input
-                id="password"
-                type="password"
-                name="password"
-                required
-                autocomplete="current-password"
-                class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6"
-              />
-            </div>
-          </div>
-
-          <div>
-            <button
-              type="submit"
-              class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-            >
-              Sign in
-            </button>
-          </div>
-        </form>
-
-        <p class="mt-10 text-center text-sm/6 text-gray-400">
-          Not a member?
-          <a
-            href="#"
-            class="font-semibold text-indigo-400 hover:text-indigo-300"
-            >Start a 14 day free trial</a
-          >
+        <p class="text-primary/80 mt-2">
+          Please login to your account
         </p>
+
       </div>
+
+
+
+
+      <form class="space-y-6">
+
+
+        <!-- EMAIL -->
+
+        <div>
+
+          <label class="block mb-2 text-primary font-medium">
+            Email
+          </label>
+
+
+          <input 
+            type="email" 
+            placeholder="koko@gmail.com"
+            class="w-full px-4 py-3 rounded-lg border-2 border-primary/30 bg-white 
+            focus:outline-none focus:ring-2 focus:ring-secondary">
+
+        </div>
+
+
+
+
+        <!-- PASSWORD -->
+
+        <div>
+
+          <label class="block mb-2 text-primary font-medium">
+            Password
+          </label>
+
+
+          <input 
+            type="password" 
+            placeholder="Password"
+            class="w-full px-4 py-3 rounded-lg border-2 border-primary/30 bg-white 
+            focus:outline-none focus:ring-2 focus:ring-secondary">
+
+        </div>
+
+
+
+
+
+        <!-- REMEMBER + FORGOT PASSWORD -->
+
+        <div class="flex items-center justify-between">
+
+
+          <label class="flex items-center gap-3 text-primary cursor-pointer">
+
+            <input 
+              type="checkbox"
+              class="w-5 h-5 accent-primary">
+
+            <span>
+              Remember Me
+            </span>
+
+          </label>
+
+
+
+          <a href="#" class="text-primary hover:text-secondary transition">
+
+            Forgot Password
+
+          </a>
+
+
+        </div>
+
+
+
+
+
+        <!-- LOGIN BUTTON -->
+
+        <button 
+          type="submit"
+          class="w-full py-3 rounded-lg bg-primary text-white text-lg font-semibold 
+          hover:bg-secondary transition">
+
+          Login
+
+        </button>
+
+
+
+
+
+        <!-- REGISTER -->
+
+        <p class="text-center text-primary mt-8">
+
+          Don't have an account?
+
+          <a href="#" class="font-bold hover:text-secondary">
+
+            Register
+
+          </a>
+
+        </p>
+
+
+
+      </form>
+
+
     </div>
-  </body>
-</html> -->
+
+
+  </div>
+
+
+</body>
+
+</html>
