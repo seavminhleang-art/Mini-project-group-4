@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shipment | Por Express</title>
+<link rel="icon" type="image/png" href="../../public/images/PorExpress-Logo.png" />
+<link rel="apple-touch-icon" href="../../public/images/PorExpress-Logo.png" />
+<script>
+  // Apply saved / preferred theme before paint to avoid a flash.
+  (function () {
+    try {
+      var t = localStorage.getItem('theme');
+      if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="../../src/output.css">
+<link rel="stylesheet" href="../../src/custom.css">
+<link rel="stylesheet" href="../../src/dark.css">
+</head>
+<body class="bg-white text-primary font-body antialiased">
+
+<!-- ============================================================ -->
+<!-- NAVBAR (reused from index.html) -->
+<!-- ============================================================ -->
+<div class="bg-primary p-4 sm:p-6 pt-4 sm:pt-6">
+  <header class="relative z-20">
+    <div class="max-w-[1180px] mx-auto h-20 flex items-center justify-between bg-white rounded-full py-2.5 pr-2.5 pl-5 shadow-[0_12px_30px_-14px_rgba(18,39,51,0.25)]">
+
+      <a href="../../index.html" class="flex items-center gap-2 h-full py-3">
+        <span class="block h-full w-44 overflow-hidden">
+          <img src="../../public/images/PorExpress-Logo.png" alt="Por Express" class="h-full w-full object-cover object-center" onerror="this.parentElement.style.display='none'; this.closest('a').querySelector('span.hidden').style.display='flex'">
+        </span>
+        <span class="hidden items-center gap-2 font-display font-bold text-lg text-primary">
+          <span class="w-6 h-6 rounded-md bg-secondary/15 flex items-center justify-center text-secondary text-xs font-mono">P</span>
+          Por express
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1">
+        <a href="../../index.html" class="text-sm font-medium text-primary px-3.5 py-2.5 rounded-full">Home</a>
+
+        <div class="nav-item group relative">
+          <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+            Services
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+          </button>
+          <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+            <ul class="flex flex-col">
+              <li><a href="../service/service.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Shipping Services</a></li>
+              <li><a href="../service/service.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Freight Options</a></li>
+              <li><a href="../service/service.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Warehousing</a></li>
+              <li><a href="../service/service.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Delivery Solutions</a></li>
+              <li><a href="../service/service.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Pricing &amp; Rates</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-item group relative">
+          <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false" aria-current="page">
+            Shipments
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+          </button>
+          <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+            <ul class="flex flex-col">
+              <li><a href="./shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Track Shipment</a></li>
+              <li><a href="./shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Create Shipment</a></li>
+              <li><a href="./shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Shipment History</a></li>
+              <li><a href="./shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Delivery Status</a></li>
+              <li><a href="./shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Invoice &amp; Receipts</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-item group relative">
+          <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+            Company
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+          </button>
+          <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+            <ul class="flex flex-col">
+              <li><a href="../company/company.html#about" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">About Us</a></li>
+              <li><a href="../company/company.html#coverage" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Coverage Areas</a></li>
+              <li><a href="../company/company.html#team" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Partners</a></li>
+              <li><a href="../company/company.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Careers</a></li>
+              <li><a href="../company/company.html#faq" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-item group relative">
+          <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+            Support
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+          </button>
+          <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+            <ul class="flex flex-col">
+              <li><a href="../support/support.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Contact Us</a></li>
+              <li><a href="../support/support.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Customer Support</a></li>
+              <li><a href="../support/support.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Live Chat</a></li>
+              <li><a href="../support/support.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Report an Issue</a></li>
+              <li><a href="../support/support.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Help Center</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="flex items-center gap-1.5 sm:gap-3">
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-accent transition-colors">
+          <svg class="theme-moon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="theme-sun w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <a href="../Auth/Auth.html" class="hidden lg:inline-block text-sm font-medium text-primary/75 hover:text-primary px-1 py-2.5">Login</a>
+        <a href="../../index.html" class="hidden lg:inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5.5 py-3 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(18,39,51,0.5)] transition-shadow whitespace-nowrap">Get Started</a>
+        <button id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-accent transition-colors">
+          <svg class="nav-open w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="nav-close w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="lg:hidden hidden max-w-[1180px] mx-auto mt-2 bg-white rounded-2xl p-3 shadow-[0_20px_45px_-20px_rgba(18,39,51,0.35)]">
+      <nav class="flex flex-col">
+        <a href="../../index.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Home</a>
+        <a href="../service/service.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Services</a>
+        <a href="./shipment.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Shipments</a>
+        <a href="../company/company.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Company</a>
+        <a href="../support/support.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Support</a>
+        <div class="h-px bg-primary/10 my-2"></div>
+        <a href="../Auth/Auth.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Login</a>
+        <a href="../../index.html" class="mt-1 inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5 py-3 rounded-full">Get Started</a>
+      </nav>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1 — HERO -->
+  <!-- ============================================================ -->
+  <section class="bg-white">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 py-24 sm:py-28 grid lg:grid-cols-2 gap-14 items-center">
+
+      <div>
+        <span class="inline-flex items-center gap-2 text-xs font-body font-semibold tracking-wide uppercase text-secondary bg-secondary/10 px-3 py-1.5 rounded-full mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Cambodia's Trusted Logistics Network
+        </span>
+
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.1] text-primary">
+          Ship Your <span class="text-secondary">Package</span> with Confidence
+        </h1>
+
+        <p class="mt-6 text-base sm:text-lg text-black/55 font-body leading-relaxed max-w-lg">
+          From a single parcel to full container loads, track every shipment in real time and get transparent delivery estimates backed by a reliable logistics network.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-4">
+          <button type="button" class="inline-flex items-center gap-2 bg-primary text-white font-body font-semibold px-7 py-3.5 rounded-full shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-20px_rgba(18,39,51,0.5)] transition-shadow hover:text-secondary transition-all duration-300">
+            Get Started
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <button type="button" class="inline-flex items-center gap-2 border border-primary text-primary bg-transparent font-body font-semibold px-7 py-3.5 rounded-full hover:bg-secondary hover:border-secondary hover:text-white transition-all duration-300 ease-in-out">
+            Track Shipment
+          </button>
+        </div>
+
+        <div class="mt-11 flex items-center gap-8">
+          <div>
+            <p class="font-mono font-bold text-2xl text-primary">25</p>
+            <p class="text-xs text-black/60 font-body mt-1">Provinces Served</p>
+          </div>
+          <div class="w-px h-10 bg-primary/10"></div>
+          <div>
+            <p class="font-mono font-bold text-2xl text-primary">98.2%</p>
+            <p class="text-xs text-black/60 font-body mt-1">On-Time Delivery</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Illustration: warehouse, delivery truck, cargo boxes — Primary / Secondary / White only -->
+      <div class="relative">
+        <div class="absolute inset-0 bg-accent rounded-2xl -rotate-2"></div>
+        <div class="relative bg-white rounded-2xl shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] p-6 sm:p-10">
+          <svg viewBox="0 0 480 340" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+            <!-- ground line -->
+            <rect x="0" y="262" width="480" height="3" fill="#1D3D50" opacity="0.12"/>
+
+            <!-- warehouse -->
+            <g>
+              <rect x="28" y="122" width="168" height="138" rx="6" fill="#1D3D50"/>
+              <polygon points="18,122 112,72 206,122" fill="#1D3D50"/>
+              <rect x="52" y="160" width="32" height="32" rx="4" fill="#FFFFFF" opacity="0.9"/>
+              <rect x="96" y="160" width="32" height="32" rx="4" fill="#FFFFFF" opacity="0.9"/>
+              <rect x="140" y="160" width="32" height="32" rx="4" fill="#FFFFFF" opacity="0.9"/>
+              <rect x="68" y="204" width="88" height="56" rx="4" fill="#00BA34"/>
+              <rect x="100" y="222" width="24" height="38" rx="2" fill="#FFFFFF"/>
+            </g>
+
+            <!-- cargo boxes -->
+            <g>
+              <rect x="212" y="192" width="88" height="40" rx="4" fill="#FFFFFF" stroke="#1D3D50" stroke-width="2"/>
+              <line x1="256" y1="192" x2="256" y2="232" stroke="#1D3D50" stroke-width="2"/>
+              <line x1="212" y1="212" x2="300" y2="212" stroke="#1D3D50" stroke-width="2"/>
+
+              <rect x="212" y="150" width="88" height="38" rx="4" fill="#00BA34"/>
+              <line x1="256" y1="150" x2="256" y2="188" stroke="#FFFFFF" stroke-width="2" opacity="0.5"/>
+            </g>
+
+            <!-- delivery truck -->
+            <g transform="translate(298,180)">
+              <rect x="0" y="28" width="92" height="50" rx="6" fill="#1D3D50"/>
+              <path d="M92 42 H126 a10 10 0 0 1 10 10 v24 h-44 z" fill="#00BA34"/>
+              <rect x="100" y="52" width="24" height="16" rx="2" fill="#FFFFFF"/>
+              <circle cx="26" cy="84" r="12" fill="#1D3D50"/>
+              <circle cx="26" cy="84" r="5" fill="#FFFFFF"/>
+              <circle cx="114" cy="84" r="12" fill="#1D3D50"/>
+              <circle cx="114" cy="84" r="5" fill="#FFFFFF"/>
+              <rect x="12" y="40" width="64" height="9" rx="2" fill="#FFFFFF"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 2 — SHIPMENT PROCESS -->
+  <!-- ============================================================ -->
+  <section class="bg-accent">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 py-24 sm:py-28">
+      <div class="max-w-2xl mx-auto text-center mb-16">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-primary">How Your Shipment Moves</h2>
+        <p class="mt-4 text-black/55 font-body">Four checkpoints, one continuous route.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 text-center hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-14 h-14 mx-auto rounded-full bg-primary flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-primary">Choose Service</h3>
+          <p class="mt-2 text-sm text-black/55 font-body">Select the shipping method that best fits your shipment.</p>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 text-center hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-14 h-14 mx-auto rounded-full bg-primary flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3"/><path d="M3 8l9 5 9-5"/><path d="M3 8v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-primary">Package Pickup</h3>
+          <p class="mt-2 text-sm text-black/55 font-body">Drop off your package or schedule a pickup.</p>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 text-center hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-14 h-14 mx-auto rounded-full bg-primary flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="15" height="12" rx="2"/><path d="M16 10h4l3 3v5h-7z"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-primary">In Transit</h3>
+          <p class="mt-2 text-sm text-black/55 font-body">Track your shipment in real time.</p>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 text-center hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-14 h-14 mx-auto rounded-full bg-primary flex items-center justify-center mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-primary">Delivered</h3>
+          <p class="mt-2 text-sm text-black/55 font-body">Receive confirmation once the package arrives safely.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3 — SHIPPING OPTIONS -->
+  <!-- ============================================================ -->
+  <section class="bg-white">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 py-24 sm:py-28">
+      <div class="max-w-2xl mx-auto text-center mb-14">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-primary">Shipping Options</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition ">
+          <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center mb-5">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-primary">Standard Shipping</h3>
+          <p class="mt-2 text-sm text-black/55 font-body leading-relaxed">Reliable shipping for everyday packages.</p>
+          <div class="mt-5 inline-flex items-center gap-2 text-xs font-mono font-semibold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">
+            5–7 Business Days
+          </div>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center mb-5">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-primary">Express Shipping</h3>
+          <p class="mt-2 text-sm text-black/55 font-body leading-relaxed">Fast delivery for urgent shipments.</p>
+          <div class="mt-5 inline-flex items-center gap-2 text-xs font-mono font-semibold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">
+            1–2 Business Days
+          </div>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center mb-5">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-primary">Nationwide Shipping</h3>
+          <p class="mt-2 text-sm text-black/55 font-body leading-relaxed">Door-to-door delivery across Cambodia.</p>
+          <div class="mt-5 inline-flex items-center gap-2 text-xs font-mono font-semibold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">
+            2–4 Business Days
+          </div>
+        </div>
+
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-12 h-12 rounded-2xl bg-primary flex items-center justify-center mb-5">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-lg text-primary">Bulk Cargo</h3>
+          <p class="mt-2 text-sm text-black/55 font-body leading-relaxed">Freight shipping for large orders.</p>
+          <div class="mt-5 inline-flex items-center gap-2 text-xs font-mono font-semibold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">
+            7–14 Business Days
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 4 — DELIVERY INFORMATION -->
+  <!-- ============================================================ -->
+  <section class="bg-accent">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 py-24 sm:py-28">
+      <div class="max-w-2xl mx-auto text-center mb-14">
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-primary">Delivery Information</h2>
+      </div>
+
+      <div class="overflow-x-auto rounded-2xl shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
+        <table class="w-full text-left border-collapse min-w-[560px] bg-white">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="font-display font-semibold text-sm px-6 py-4">Service</th>
+              <th class="font-display font-semibold text-sm px-6 py-4">Delivery</th>
+              <th class="font-display font-semibold text-sm px-6 py-4">Tracking</th>
+              <th class="font-display font-semibold text-sm px-6 py-4">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-primary/10">
+              <td class="px-6 py-4 font-body font-semibold text-primary">Standard</td>
+              <td class="px-6 py-4 font-mono text-sm text-black/70">5–7 Days</td>
+              <td class="px-6 py-4 font-body text-black/70">Daily</td>
+              <td class="px-6 py-4 font-body text-black/70">Everyday Parcels</td>
+            </tr>
+            <tr class="border-b border-primary/10 bg-accent/60">
+              <td class="px-6 py-4 font-body font-semibold text-primary">Express</td>
+              <td class="px-6 py-4 font-mono text-sm text-black/70">1–2 Days</td>
+              <td class="px-6 py-4 font-body text-black/70">Real-Time</td>
+              <td class="px-6 py-4 font-body text-black/70">Urgent Deliveries</td>
+            </tr>
+            <tr class="border-b border-primary/10">
+              <td class="px-6 py-4 font-body font-semibold text-primary">Nationwide</td>
+              <td class="px-6 py-4 font-mono text-sm text-black/70">2–4 Days</td>
+              <td class="px-6 py-4 font-body text-black/70">Real-Time</td>
+              <td class="px-6 py-4 font-body text-black/70">Provincial Deliveries</td>
+            </tr>
+            <tr class="bg-accent/60">
+              <td class="px-6 py-4 font-body font-semibold text-primary">Bulk Cargo</td>
+              <td class="px-6 py-4 font-mono text-sm text-black/70">7–14 Days</td>
+              <td class="px-6 py-4 font-body text-black/70">Milestone</td>
+              <td class="px-6 py-4 font-body text-black/70">Freight</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6 mt-12">
+        <div class="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-11 h-11 shrink-0 rounded-full bg-secondary/10 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00BA34" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <p class="font-display font-bold text-primary text-sm">Safe Packaging</p>
+        </div>
+        <div class="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-11 h-11 shrink-0 rounded-full bg-secondary/10 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00BA34" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 22s8-6 8-12a8 8 0 1 0-16 0c0 6 8 12 8 12z"/></svg>
+          </div>
+          <p class="font-display font-bold text-primary text-sm">GPS Tracking</p>
+        </div>
+        <div class="flex items-center gap-4 bg-white rounded-2xl px-6 py-5 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-11 h-11 shrink-0 rounded-full bg-secondary/10 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00BA34" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <p class="font-display font-bold text-primary text-sm">On-Time Delivery</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 5 — FAQ -->
+  <!-- ============================================================ -->
+  <section class="bg-white">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 py-24 sm:py-28">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-14">
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-primary">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="space-y-4" id="faq-accordion">
+
+          <div class="faq-item bg-white rounded-2xl border border-primary/10 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] overflow-hidden">
+            <h3>
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1">
+                <span class="font-display font-semibold text-primary">How do I track my shipment?</span>
+                <svg class="faq-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D3D50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-1" role="region" aria-labelledby="faq-btn-1" class="faq-panel" hidden>
+              <p class="px-6 pb-5 text-sm text-black/55 font-body leading-relaxed">Use your shipment tracking number to monitor delivery status.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white rounded-2xl border border-primary/10 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] overflow-hidden">
+            <h3>
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+                <span class="font-display font-semibold text-primary">What if my package is delayed?</span>
+                <svg class="faq-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D3D50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" class="faq-panel" hidden>
+              <p class="px-6 pb-5 text-sm text-black/55 font-body leading-relaxed">You will receive an updated delivery estimate.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white rounded-2xl border border-primary/10 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] overflow-hidden">
+            <h3>
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+                <span class="font-display font-semibold text-primary">Can I change my delivery address?</span>
+                <svg class="faq-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D3D50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" class="faq-panel" hidden>
+              <p class="px-6 pb-5 text-sm text-black/55 font-body leading-relaxed">Yes, before the shipment enters transit.</p>
+            </div>
+          </div>
+
+          <div class="faq-item bg-white rounded-2xl border border-primary/10 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] overflow-hidden">
+            <h3>
+              <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
+                <span class="font-display font-semibold text-primary">Do you offer shipment insurance?</span>
+                <svg class="faq-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D3D50" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              </button>
+            </h3>
+            <div id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" class="faq-panel" hidden>
+              <p class="px-6 pb-5 text-sm text-black/55 font-body leading-relaxed">Insurance is available for high-value shipments.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================ -->
+<!-- FOOTER (reused from index.html) -->
+<!-- ============================================================ -->
+<footer class="bg-primary pt-20">
+  <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-10 pb-15 border-b border-white/12">
+
+      <div>
+        <a href="../../index.html" class="flex items-center gap-2 mb-4">
+          <img src="../../public/images/PorExpress-Logo.png" alt="Por Express" class="h-24 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <span class="hidden items-center gap-2 font-display font-bold text-lg text-white">
+            <span class="w-6 h-6 rounded-md bg-secondary/25 flex items-center justify-center text-secondary text-xs font-mono">P</span>
+            Por express
+          </span>
+        </a>
+        <p class="text-[13.5px] leading-relaxed text-accent/60 max-w-65 mb-5.5">Por Express is committed to delivering fast, secure, and reliable logistics solutions across Cambodia.</p>
+        <div class="flex gap-2.5">
+          <a href="#" aria-label="Facebook" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><path d="M22 4.01c-.8.36-1.66.6-2.56.71a4.4 4.4 0 001.94-2.43 8.8 8.8 0 01-2.8 1.07 4.4 4.4 0 00-7.5 4.01A12.5 12.5 0 013 3.13a4.4 4.4 0 001.36 5.87 4.4 4.4 0 01-2-.55v.06a4.4 4.4 0 003.53 4.31 4.4 4.4 0 01-2 .08 4.4 4.4 0 004.1 3.05A8.8 8.8 0 012 17.54a12.4 12.4 0 006.72 1.97c8.06 0 12.47-6.68 12.47-12.47l-.01-.57A8.9 8.9 0 0022 4.01z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 014 0V17m0 0v-4.5"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-display text-lg font-semibold text-white mb-4.5">Payment Methods</h4>
+        <ul class="flex flex-col gap-3">
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">PayPal</a></li>
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Mobile Money</a></li>
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Visa</a></li>
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Mastercard</a></li>
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Bank Transfer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display text-lg font-semibold text-white mb-4.5">Services</h4>
+        <ul class="flex flex-col gap-3">
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Parcel Tracking</a></li>
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">International Shipping</a></li>
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Express Delivery</a></li>
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Freight Services</a></li>
+          <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Local Delivery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display text-lg font-semibold text-white mb-4.5">Quick</h4>
+        <ul class="flex flex-col gap-3">
+          <li><a href="../../index.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Home</a></li>
+          <li><a href="../service/service.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Services</a></li>
+          <li><a href="./shipment.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Shipments</a></li>
+          <li><a href="../company/company.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Company</a></li>
+          <li><a href="../support/support.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display text-lg font-semibold text-white mb-4.5">Contact us</h4>
+        <ul class="flex flex-col gap-3 mb-6">
+          <li class="text-sm text-accent/75">porexpress@gmail.com</li>
+          <li class="text-sm text-accent/75">+855 123 456 789</li>
+          <li class="text-sm text-accent/75">Veng Sreng, Phnom Penh, Cambodia</li>
+        </ul>
+        <h4 class="font-mono font-bold text-[11.5px] uppercase tracking-wide text-white mb-3">Sponsored and recognized by</h4>
+        <a href="#" class="flex items-center gap-2 opacity-90 hover:opacity-100 transition">
+          <img src="../../public/images/istad-logo.png" alt="ISTAD — Institute of Science and Technology Advanced Development" class="h-16 w-auto" onerror="this.style.display='none'">
+          <span class="font-display font-bold text-white text-lg"></span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="flex justify-between items-center py-6.5 flex-wrap gap-3">
+      <p class="font-mono text-[12.5px] text-accent/45">Copyright © 2026 Por Express Ltd.co</p>
+      <div class="flex gap-5.5 flex-wrap items-center text-[12.5px] text-accent/45">
+        <span>All Rights Reserved</span>
+        <a href="#" class="hover:opacity-80">Terms and Conditions</a>
+        <a href="#" class="hover:opacity-80">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../js/home.js"></script>
+<script src="../../js/ui.js"></script>
+<script src="../../js/shipment.js"></script>
+
+</body>
+</html>
