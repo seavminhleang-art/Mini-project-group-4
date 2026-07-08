@@ -89,6 +89,11 @@ html.dark .bg-accent {
   border: 1px solid rgba(233, 239, 243, 0.14);
 }
 
+/* Allow green hover borders in Dark Mode */
+html.dark .hover\:border-secondary:hover {
+  border-color: var(--color-secondary) !important;
+}
+
 /* --- Hover pill: bg-accent hover states default to the light-mode
    accent color, which reads wrong once the surface underneath has
    flipped dark. Route the hover fill through the same dark-primary
