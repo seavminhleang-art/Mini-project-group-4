@@ -6,17 +6,38 @@
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: "IBM Plex Mono", monospace;
+<<<<<<<<< Temporary merge branch 1
     --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-green-200: oklch(92.5% 0.084 155.995);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-mist-300: oklch(87.2% 0.007 219.6);
+    --color-mist-400: oklch(72.3% 0.014 214.4);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-sm: 24rem;
     --container-md: 28rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-2xl: 1rem;
+    --blur-sm: 8px;
+=========
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
     --container-lg: 32rem;
     --container-2xl: 42rem;
     --container-3xl: 48rem;
@@ -221,11 +242,27 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
+<<<<<<<<< Temporary merge branch 1
   .inset-0 {
     inset: 0;
+  }
+  .z-0 {
+    z-index: 0;
+=========
+  .static {
+    position: static;
+  }
+  .inset-0 {
+    inset: 0;
+  }
+  .top-1\/2 {
+    top: calc(1 / 2 * 100%);
   }
   .top-\[9px\] {
     top: 9px;
@@ -245,6 +282,12 @@
   .right-1\/2 {
     right: calc(1 / 2 * 100%);
   }
+  .right-2\.5 {
+    right: calc(var(--spacing) * 2.5);
+  }
+  .right-3 {
+    right: calc(var(--spacing) * 3);
+  }
   .right-\[-50\%\] {
     right: -50%;
   }
@@ -262,6 +305,9 @@
   }
   .left-1\/2 {
     left: calc(1 / 2 * 100%);
+  }
+  .left-3\.5 {
+    left: calc(var(--spacing) * 3.5);
   }
   .left-\[-50\%\] {
     left: -50%;
@@ -352,6 +398,9 @@
   }
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
+  }
+  .mt-\[3px\] {
+    margin-top: 3px;
   }
   .mt-auto {
     margin-top: auto;
@@ -455,6 +504,9 @@
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
+  .h-4\.5 {
+    height: calc(var(--spacing) * 4.5);
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
@@ -497,9 +549,6 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
-  }
   .h-40 {
     height: calc(var(--spacing) * 40);
   }
@@ -530,23 +579,20 @@
   .h-px {
     height: 1px;
   }
-  .max-h-\[90vh\] {
-    max-height: 90vh;
-  }
-  .max-h-screen {
-    max-height: 100vh;
-  }
   .min-h-\[100px\] {
     min-height: 100px;
   }
   .min-h-\[380px\] {
     min-height: 380px;
   }
-  .min-h-screen {
-    min-height: 100vh;
+  .w-0 {
+    width: 0;
   }
   .w-0\.5 {
     width: calc(var(--spacing) * 0.5);
+  }
+  .w-1 {
+    width: var(--spacing);
   }
   .w-1\.5 {
     width: calc(var(--spacing) * 1.5);
@@ -565,6 +611,7 @@
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
+>>>>>>>>> Temporary merge branch 2
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
@@ -605,8 +652,8 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
-  .w-36 {
-    width: calc(var(--spacing) * 36);
+  .w-28 {
+    width: calc(var(--spacing) * 28);
   }
   .w-44 {
     width: calc(var(--spacing) * 44);
@@ -634,6 +681,7 @@
   }
   .w-auto {
     width: auto;
+>>>>>>>>> Temporary merge branch 2
   }
   .w-full {
     width: 100%;
@@ -698,9 +746,6 @@
   .max-w-lg {
     max-width: var(--container-lg);
   }
-  .max-w-md {
-    max-width: var(--container-md);
-  }
   .min-w-62 {
     min-width: calc(var(--spacing) * 62);
   }
@@ -721,6 +766,10 @@
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-y-1\/2 {
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-2 {
@@ -747,6 +796,9 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -822,6 +874,13 @@
   }
   .gap-14 {
     gap: calc(var(--spacing) * 14);
+  }
+  .space-y-3\.5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3.5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -934,6 +993,9 @@
       border-color: color-mix(in oklab, var(--color-black) 15%, transparent);
     }
   }
+  .border-current {
+    border-color: currentcolor;
+  }
   .border-primary {
     border-color: var(--color-primary);
   }
@@ -1015,6 +1077,12 @@
       border-color: color-mix(in oklab, var(--color-white) 25%, transparent);
     }
   }
+  .border-white\/30 {
+    border-color: color-mix(in srgb, #fff 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 30%, transparent);
+    }
+  }
   .border-white\/40 {
     border-color: color-mix(in srgb, #fff 40%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1028,16 +1096,31 @@
     background-color: color-mix(in srgb, #E5E5E5 60%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-accent) 60%, transparent);
+>>>>>>>>> Temporary merge branch 2
     }
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+<<<<<<<<< Temporary merge branch 1
+  .bg-black\/20 {
+    background-color: color-mix(in srgb, #000 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-black) 20%, transparent);
+    }
+  }
+  .bg-mist-300 {
+    background-color: var(--color-mist-300);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+=========
   .bg-black\/15 {
     background-color: color-mix(in srgb, #000 15%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-black) 15%, transparent);
     }
-  }
-  .bg-mist-300 {
-    background-color: var(--color-mist-300);
   }
   .bg-primary {
     background-color: var(--color-primary);
@@ -1135,15 +1218,41 @@
       background-color: color-mix(in oklab, var(--color-white) 40%, transparent);
     }
   }
+  .bg-white\/60 {
+    background-color: color-mix(in srgb, #fff 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 60%, transparent);
+    }
+  }
   .bg-\[repeating-linear-gradient\(90deg\,rgba\(18\,39\,51\,0\.2\)_0_60\%\,transparent_0_100\%\)\] {
     background-image: repeating-linear-gradient(90deg,rgba(18,39,51,0.2) 0 60%,transparent 0 100%);
   }
   .bg-\[length\:14px_1px\] {
     background-size: 14px 1px;
+>>>>>>>>> Temporary merge branch 2
   }
   .object-contain {
     object-fit: contain;
   }
+<<<<<<<<< Temporary merge branch 1
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .px-1 {
+    padding-inline: var(--spacing);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
+=========
   .object-cover {
     object-fit: cover;
   }
@@ -1161,6 +1270,9 @@
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
+  }
+  .p-3\.5 {
+    padding: calc(var(--spacing) * 3.5);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -1207,9 +1319,11 @@
   .px-7 {
     padding-inline: calc(var(--spacing) * 7);
   }
-  .px-10 {
-    padding-inline: calc(var(--spacing) * 10);
+  .py-1 {
+    padding-block: var(--spacing);
   }
+<<<<<<<<< Temporary merge branch 1
+=========
   .py-1\.5 {
     padding-block: calc(var(--spacing) * 1.5);
   }
@@ -1243,6 +1357,9 @@
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
   }
@@ -1273,6 +1390,18 @@
   .pr-2\.5 {
     padding-right: calc(var(--spacing) * 2.5);
   }
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
+  }
+  .pr-9 {
+    padding-right: calc(var(--spacing) * 9);
+  }
+  .pr-10 {
+    padding-right: calc(var(--spacing) * 10);
+  }
   .pb-1 {
     padding-bottom: var(--spacing);
   }
@@ -1290,6 +1419,9 @@
   }
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
+  }
+  .pl-10 {
+    padding-left: calc(var(--spacing) * 10);
   }
   .text-center {
     text-align: center;
@@ -1341,6 +1473,9 @@
   .text-\[9px\] {
     font-size: 9px;
   }
+  .text-\[10\.5px\] {
+    font-size: 10.5px;
+  }
   .text-\[10px\] {
     font-size: 10px;
   }
@@ -1374,8 +1509,14 @@
   .text-\[17px\] {
     font-size: 17px;
   }
+  .text-\[clamp\(24px\,2\.6vw\,32px\)\] {
+    font-size: clamp(24px, 2.6vw, 32px);
+  }
   .text-\[clamp\(26px\,2\.8vw\,34px\)\] {
     font-size: clamp(26px, 2.8vw, 34px);
+  }
+  .text-\[clamp\(26px\,3vw\,36px\)\] {
+    font-size: clamp(26px, 3vw, 36px);
   }
   .text-\[clamp\(28px\,3vw\,38px\)\] {
     font-size: clamp(28px, 3vw, 38px);
@@ -1396,9 +1537,21 @@
     --tw-leading: 1.1;
     line-height: 1.1;
   }
+  .leading-\[1\.5\] {
+    --tw-leading: 1.5;
+    line-height: 1.5;
+  }
+  .leading-\[1\.6\] {
+    --tw-leading: 1.6;
+    line-height: 1.6;
+  }
   .leading-\[1\.08\] {
     --tw-leading: 1.08;
     line-height: 1.08;
+  }
+  .leading-\[2\] {
+    --tw-leading: 2;
+    line-height: 2;
   }
   .leading-none {
     --tw-leading: 1;
@@ -1470,6 +1623,18 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-black\/30 {
+    color: color-mix(in srgb, #000 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-black) 30%, transparent);
+    }
+  }
+  .text-black\/35 {
+    color: color-mix(in srgb, #000 35%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-black) 35%, transparent);
+    }
   }
   .text-black\/40 {
     color: color-mix(in srgb, #000 40%, transparent);
@@ -1546,6 +1711,23 @@
   .text-white {
     color: var(--color-white);
   }
+<<<<<<<<< Temporary merge branch 1
+  .underline {
+    text-decoration-line: underline;
+  }
+  .placeholder-gray-200 {
+    &::placeholder {
+      color: var(--color-gray-200);
+    }
+  }
+  .placeholder-gray-500 {
+    &::placeholder {
+      color: var(--color-gray-500);
+    }
+  }
+  .accent-primary {
+    accent-color: var(--color-primary);
+=========
   .text-white\/55 {
     color: color-mix(in srgb, #fff 55%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -1564,6 +1746,12 @@
       color: color-mix(in oklab, var(--color-white) 70%, transparent);
     }
   }
+  .text-white\/75 {
+    color: color-mix(in srgb, #fff 75%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 75%, transparent);
+    }
+  }
   .uppercase {
     text-transform: uppercase;
   }
@@ -1571,14 +1759,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  .accent-primary {
-    accent-color: var(--color-primary);
-  }
   .opacity-0 {
     opacity: 0%;
   }
   .opacity-25 {
     opacity: 25%;
+  }
+  .opacity-40 {
+    opacity: 40%;
   }
   .opacity-70 {
     opacity: 70%;
@@ -1621,6 +1809,22 @@
     --tw-shadow: 0 40px 90px -40px var(--tw-shadow-color, rgba(0,0,0,0.55));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+<<<<<<<<< Temporary merge branch 1
+  .backdrop-blur-sm {
+    --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+=========
+>>>>>>>>> Temporary merge branch 2
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -1662,6 +1866,36 @@
     -webkit-user-select: none;
     user-select: none;
   }
+  .\[text-shadow\:0_1px_6px_rgba\(0\,0\,0\,0\.5\)\] {
+    text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+  }
+  .\[text-shadow\:0_2px_8px_rgba\(0\,0\,0\,0\.55\)\] {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+  }
+  .\[text-shadow\:0_2px_10px_rgba\(0\,0\,0\,0\.5\)\] {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+  .group-focus-within\:pointer-events-auto {
+    &:is(:where(.group):focus-within *) {
+      pointer-events: auto;
+    }
+  }
+  .group-focus-within\:visible {
+    &:is(:where(.group):focus-within *) {
+      visibility: visible;
+    }
+  }
+  .group-focus-within\:translate-y-0 {
+    &:is(:where(.group):focus-within *) {
+      --tw-translate-y: 0;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .group-focus-within\:opacity-100 {
+    &:is(:where(.group):focus-within *) {
+      opacity: 100%;
+    }
+  }
   .group-hover\:pointer-events-auto {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1673,6 +1907,14 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         visibility: visible;
+      }
+    }
+  }
+  .group-hover\:translate-x-1 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-x: var(--spacing);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
       }
     }
   }
@@ -1715,6 +1957,14 @@
   .group-\[\.open\]\:opacity-100 {
     &:is(:where(.group):is(.open) *) {
       opacity: 100%;
+    }
+  }
+  .placeholder\:text-black\/30 {
+    &::placeholder {
+      color: color-mix(in srgb, #000 30%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, var(--color-black) 30%, transparent);
+      }
     }
   }
   .hover\:-translate-y-0\.75 {
@@ -1761,13 +2011,12 @@
       }
     }
   }
+<<<<<<<<< Temporary merge branch 1
   .hover\:text-accent {
     &:hover {
       @media (hover: hover) {
         color: var(--color-accent);
-      }
-    }
-  }
+=========
   .hover\:text-primary {
     &:hover {
       @media (hover: hover) {
@@ -1827,6 +2076,14 @@
       }
     }
   }
+  .hover\:shadow-\[0_10px_25px_-8px_rgba\(18\,39\,51\,0\.5\)\] {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: 0 10px 25px -8px var(--tw-shadow-color, rgba(18,39,51,0.5));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+    }
+  }
   .hover\:shadow-\[0_20px_45px_-20px_rgba\(18\,39\,51\,0\.5\)\] {
     &:hover {
       @media (hover: hover) {
@@ -1851,26 +2108,10 @@
       }
     }
   }
-  .focus\:ring-2 {
-    &:focus {
-      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-  .focus\:ring-secondary {
-    &:focus {
-      --tw-ring-color: var(--color-secondary);
-    }
-  }
-  .focus\:outline-none {
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
-    }
-  }
   .sm\:col-span-2 {
     @media (width >= 40rem) {
       grid-column: span 2 / span 2;
+>>>>>>>>> Temporary merge branch 2
     }
   }
   .sm\:mx-auto {
@@ -1878,6 +2119,76 @@
       margin-inline: auto;
     }
   }
+<<<<<<<<< Temporary merge branch 1
+  .sm\:w-\[250px\] {
+    @media (width >= 40rem) {
+      width: 250px;
+    }
+  }
+  .sm\:w-full {
+    @media (width >= 40rem) {
+      width: 100%;
+    }
+  }
+  .sm\:max-w-sm {
+    @media (width >= 40rem) {
+      max-width: var(--container-sm);
+    }
+  }
+  .sm\:flex-col {
+    @media (width >= 40rem) {
+      flex-direction: column;
+    }
+  }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:w-1\/2 {
+    @media (width >= 48rem) {
+      width: calc(1 / 2 * 100%);
+    }
+  }
+  .md\:w-40 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 40);
+    }
+  }
+  .md\:w-\[250px\] {
+    @media (width >= 48rem) {
+      width: 250px;
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:p-10 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:px-8 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:py-10 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:mt-5 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 5);
+=========
   .sm\:block {
     @media (width >= 40rem) {
       display: block;
@@ -1888,14 +2199,9 @@
       height: calc(var(--spacing) * 10);
     }
   }
-  .sm\:h-14 {
+  .sm\:w-32 {
     @media (width >= 40rem) {
-      height: calc(var(--spacing) * 14);
-    }
-  }
-  .sm\:w-44 {
-    @media (width >= 40rem) {
-      width: calc(var(--spacing) * 44);
+      width: calc(var(--spacing) * 32);
     }
   }
   .sm\:max-w-\[calc\(50\%-0\.75rem\)\] {
@@ -1951,6 +2257,11 @@
   .sm\:py-20 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .sm\:py-24 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 24);
     }
   }
   .sm\:py-28 {
@@ -2126,6 +2437,11 @@
       grid-template-columns: 1.05fr 1fr;
     }
   }
+  .lg\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
+    }
+  }
   .lg\:gap-6 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 6);
@@ -2173,6 +2489,7 @@
       &:first-child {
         padding-left: 0;
       }
+>>>>>>>>> Temporary merge branch 2
     }
   }
 }
@@ -2274,14 +2591,58 @@ body {
   inherits: false;
   initial-value: solid;
 }
+<<<<<<<<< Temporary merge branch 1
+=========
 @property --tw-leading {
   syntax: "*";
   inherits: false;
 }
+>>>>>>>>> Temporary merge branch 2
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+  initial-value: #0000;
 }
+<<<<<<<<< Temporary merge branch 1
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+=========
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
@@ -2351,6 +2712,29 @@ body {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+<<<<<<<<< Temporary merge branch 1
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-outline-style: solid;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+=========
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -2372,6 +2756,15 @@ body {
       --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
       --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
@@ -2389,6 +2782,9 @@ body {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+<<<<<<<<< Temporary merge branch 1
+=========
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
     }

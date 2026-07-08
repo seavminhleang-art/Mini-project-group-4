@@ -89,6 +89,20 @@ html.dark .bg-accent {
   border: 1px solid rgba(233, 239, 243, 0.14);
 }
 
+/* Allow green hover borders in Dark Mode */
+html.dark .hover\:border-secondary:hover {
+  border-color: var(--color-secondary) !important;
+}
+
+/* --- Hover pill: bg-accent hover states default to the light-mode
+   accent color, which reads wrong once the surface underneath has
+   flipped dark. Route the hover fill through the same dark-primary
+   tone already used for .bg-primary so nav pills, dropdown items,
+   and the mobile menu links all pick up a proper dark highlight. --- */
+html.dark .hover\:bg-accent:hover {
+  background-color: #0a1621 !important;
+}
+
 /* --- Theme-toggle icon swap (moon in light, sun in dark) --- */
 .theme-sun {
   display: none;
