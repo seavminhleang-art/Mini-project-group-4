@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Por Express</title>
+  <link rel="icon" type="image/png" href="../../public/images/PorExpressLOGO.png" />
+  <link rel="apple-touch-icon" href="../../public/images/PorExpressLOGO.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script>
+    // Apply saved / preferred theme before paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) { }
+    })();
+  </script>
+  <link rel="stylesheet" href="../../src/output.css" />
+  <link rel="stylesheet" href="../../src/custom.css" />
+  <link rel="stylesheet" href="../../src/dark.css" />
+</head>
+
+<body class="bg-white text-primary font-body antialiased">
+
+  <!-- ================= HERO (dark) ================= -->
+  <div class="bg-primary">
+    <header class="relative z-20 px-4 sm:px-6 pt-4 sm:pt-5">
+      <div class="max-w-[1180px] mx-auto h-20 flex items-center justify-between bg-white rounded-full py-2.5 pr-2.5 pl-5 shadow-[0_12px_30px_-14px_rgba(18,39,51,0.25)]">
+
+        <a href="../../index.html" class="flex items-center gap-2 h-full py-3">
+          <span class="block h-full w-44 overflow-hidden">
+            <img src="../../public/images/PorExpress-Logo.png" alt="Por Express" class="h-full w-full object-cover object-center" onerror="this.parentElement.style.display='none'; this.closest('a').querySelector('span.hidden').style.display='flex'">
+          </span>
+          <span class="hidden items-center gap-2 font-display font-bold text-lg text-primary">
+            <span class="w-6 h-6 rounded-md bg-secondary/15 flex items-center justify-center text-secondary text-xs font-mono">P</span>
+            Por express
+          </span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="../../index.html" class="text-sm font-medium text-primary px-3.5 py-2.5 rounded-full">Home</a>
+
+          <div class="nav-item group relative">
+            <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false" aria-current="page">
+              Services
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+              <ul class="flex flex-col">
+                <li><a href="#shipping-services" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Shipping Services</a></li>
+                <li><a href="#freight-options" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Freight Options</a></li>
+                <li><a href="#warehousing" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Warehousing</a></li>
+                <li><a href="#delivery-solutions" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Delivery Solutions</a></li>
+                <li><a href="#pricing" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Pricing &amp; Rates</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nav-item group relative">
+            <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+              Shipments
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+              <ul class="flex flex-col">
+                <li><a href="../shipment/shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Track Shipment</a></li>
+                <li><a href="../shipment/shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Create Shipment</a></li>
+                <li><a href="../shipment/shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Shipment History</a></li>
+                <li><a href="../shipment/shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Delivery Status</a></li>
+                <li><a href="../shipment/shipment.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Invoice &amp; Receipts</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nav-item group relative">
+            <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+              Company
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+              <ul class="flex flex-col">
+                <li><a href="../company/company.html#about" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">About Us</a></li>
+                <li><a href="../company/company.html#coverage" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Coverage Areas</a></li>
+                <li><a href="../company/company.html#team" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Partners</a></li>
+                <li><a href="../company/company.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Careers</a></li>
+                <li><a href="../company/company.html#faq" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="nav-item group relative">
+            <button class="nav-trigger flex items-center gap-1.5 text-sm font-medium text-primary hover:bg-accent transition-colors px-4 py-2.5 rounded-full" aria-expanded="false">
+              Support
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-[.open]:rotate-180"><path d="M6 9l6 6 6-6" /></svg>
+            </button>
+            <div class="dropdown-panel absolute top-[calc(100%+14px)] left-1/2 -translate-x-1/2 min-w-62 bg-white rounded-2xl p-2.5 shadow-[0_26px_55px_-20px_rgba(18,39,51,0.35)] opacity-0 invisible pointer-events-none translate-y-2 transition-all duration-150 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 group-[.open]:opacity-100 group-[.open]:visible group-[.open]:pointer-events-auto group-[.open]:translate-y-0 z-50">
+              <ul class="flex flex-col">
+                <li><a href="../support/support.html#contact" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Contact Us</a></li>
+                <li><a href="../support/support.html" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Customer Support</a></li>
+                <li><a href="../support/support.html#chat" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Live Chat</a></li>
+                <li><a href="../support/support.html#report" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Report an Issue</a></li>
+                <li><a href="../support/support.html#help-center" class="block text-sm font-medium text-black/60 hover:bg-accent hover:text-primary px-3 py-2.5 rounded-lg">Help Center</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="flex items-center gap-1.5 sm:gap-3">
+          <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-accent transition-colors">
+            <svg class="theme-moon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            <svg class="theme-sun w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          </button>
+          <a href="../Auth/login.html" class="hidden lg:inline-block text-sm font-medium text-primary/75 hover:text-primary px-1 py-2.5">Login</a>
+          <a href="../../index.html" class="hidden lg:inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5.5 py-3 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(18,39,51,0.5)] transition-shadow whitespace-nowrap">Get Started</a>
+          <button id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-accent transition-colors">
+            <svg class="nav-open w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg class="nav-close w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="lg:hidden hidden max-w-[1180px] mx-auto mt-2 bg-white rounded-2xl p-3 shadow-[0_20px_45px_-20px_rgba(18,39,51,0.35)]">
+        <nav class="flex flex-col">
+          <a href="../../index.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Home</a>
+          <a href="#shipping-services" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Services</a>
+          <a href="../shipment/shipment.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Shipments</a>
+          <a href="../company/company.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Company</a>
+          <a href="../support/support.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Support</a>
+          <div class="h-px bg-primary/10 my-2"></div>
+          <a href="../Auth/login.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Login</a>
+          <a href="../../index.html" class="mt-1 inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5 py-3 rounded-full">Get Started</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8 py-16 sm:py-20">
+      <span class="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wide text-secondary bg-secondary/10 px-3 py-1.5 rounded-full mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Our Services
+      </span>
+      <h1 class="font-display font-bold text-[clamp(32px,4.4vw,50px)] leading-[1.1] tracking-tight text-white mb-5">Our Logistics <span class="text-secondary">Solutions</span></h1>
+      <p class="text-base leading-relaxed text-accent/60 max-w-[520px] mb-8">Orchestrating high-precision supply chains across Cambodia with smart infrastructure and nationwide connectivity.</p>
+      <div class="flex items-center gap-3.5 flex-wrap">
+        <a href="#pricing" class="inline-flex items-center justify-center font-semibold text-[15px] text-white bg-secondary px-7 py-3.5 rounded-full hover:shadow-[0_8px_20px_-6px_rgba(0,186,52,0.45)] transition-shadow">Get a Quote</a>
+        <a href="../shipment/shipment.html" class="inline-flex items-center justify-center font-semibold text-[15px] text-primary bg-white px-7 py-3.5 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(0,0,0,0.3)] transition-shadow">Track Shipment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SHIPPING SERVICES ================= -->
+  <section class="bg-white py-24 sm:py-28" id="shipping-services">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-[640px] mb-14">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Cambodia Logistics Network</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-3.5">Shipping Services</h2>
+        <p class="text-base leading-relaxed text-black/55">Two speeds, one reliable network.</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white border border-primary/8 rounded-2xl p-6 flex justify-between items-start gap-4 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 shrink-0 rounded-[10px] bg-secondary/15 flex items-center justify-center text-secondary text-lg">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-semibold text-lg text-primary mb-1.5">Express Delivery</h4>
+              <p class="text-sm leading-relaxed text-black/55">Time-sensitive shipping that guarantees delivery within defined windows. Perfect for high-priority documents and perishable cargo.</p>
+            </div>
+          </div>
+          <div class="text-black/30 shrink-0">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </div>
+        </div>
+        <div class="bg-white border border-primary/8 rounded-2xl p-6 flex justify-between items-start gap-4 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 shrink-0 rounded-[10px] bg-secondary/15 flex items-center justify-center text-secondary text-lg">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-semibold text-lg text-primary mb-1.5">Local Distribution</h4>
+              <p class="text-sm leading-relaxed text-black/55">High-frequency urban network providing same-day delivery within Phnom Penh and next-day to major provincial cities.</p>
+            </div>
+          </div>
+          <div class="text-black/30 shrink-0">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FREIGHT INFRASTRUCTURE ================= -->
+  <section class="bg-accent py-24 sm:py-28" id="freight-options">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-[640px] mb-14">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Freight Options</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-3.5">Freight Infrastructure</h2>
+        <p class="text-base leading-relaxed text-black/55">Air, sea, and road — whichever route your cargo needs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-12 h-12 rounded-2xl bg-secondary/15 flex items-center justify-center text-secondary text-xl mb-5">
+            <i class="fa-solid fa-plane"></i>
+          </div>
+          <span class="block text-xs font-mono font-bold text-secondary uppercase tracking-wider mb-1.5">Local Air Cargo</span>
+          <h4 class="font-display font-bold text-lg text-primary mb-2.5">PP &amp; Siem Reap</h4>
+          <p class="text-sm leading-relaxed text-black/55">Express air freight connections between Phnom Penh and Siem Reap for time-critical assets and luxury goods.</p>
+        </div>
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-12 h-12 rounded-2xl bg-secondary/15 flex items-center justify-center text-secondary text-xl mb-5">
+            <i class="fa-solid fa-ship"></i>
+          </div>
+          <span class="block text-xs font-mono font-bold text-secondary uppercase tracking-wider mb-1.5">Intranational Sea Freight</span>
+          <h4 class="font-display font-bold text-lg text-primary mb-2.5">Coastal &amp; River</h4>
+          <p class="text-sm leading-relaxed text-black/55">Direct maritime services via Sihanoukville Port handling FCL/LCL for industrial and bulk load requirements.</p>
+        </div>
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-12 h-12 rounded-2xl bg-secondary/15 flex items-center justify-center text-secondary text-xl mb-5">
+            <i class="fa-solid fa-train"></i>
+          </div>
+          <span class="block text-xs font-mono font-bold text-secondary uppercase tracking-wider mb-1.5">Inter-Provincial Rail/Road</span>
+          <h4 class="font-display font-bold text-lg text-primary mb-2.5">Nationwide Trucking</h4>
+          <p class="text-sm leading-relaxed text-black/55">Heavy-duty transport solutions across the primary national road network and domestic rail lines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SMART WAREHOUSING ================= -->
+  <section class="bg-white py-24 sm:py-28" id="warehousing">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="bg-accent border border-primary/8 rounded-[20px] p-8">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Warehousing</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-3.5">Smart Warehousing</h2>
+        <p class="text-base leading-relaxed text-black/55 max-w-2xl">Our facilities are equipped with IoT-enabled climate control and AI-driven inventory management systems.</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 items-center">
+          <div class="space-y-6">
+            <div class="flex gap-4 items-start">
+              <div class="w-11 h-11 shrink-0 rounded-[10px] bg-secondary/15 flex items-center justify-center text-secondary text-lg">
+                <i class="fa-solid fa-temperature-arrow-down"></i>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-primary mb-1">Climate-Controlled</h4>
+                <p class="text-sm text-black/55">Precision storage for pharmaceuticals &amp; perishables.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div class="w-11 h-11 shrink-0 rounded-[10px] bg-secondary/15 flex items-center justify-center text-secondary text-lg">
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-primary mb-1">Live Inventory</h4>
+                <p class="text-sm text-black/55">Real-time SKU tracking with 99.9% accuracy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-primary rounded-2xl p-6 text-center text-white min-h-[220px] flex flex-col justify-center items-center">
+            <h3 class="font-display font-bold text-lg tracking-wide mb-2">Smart Warehouse Management System</h3>
+            <div class="text-5xl text-secondary/40 my-4">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <p class="text-xs text-accent/60 max-w-xs">Interactive blueprint &amp; monitoring system active</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DELIVERY SOLUTIONS ================= -->
+  <section class="bg-accent py-24 sm:py-28" id="delivery-solutions">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-[640px] mx-auto text-center mb-14">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Delivery Solutions</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-3.5">Precision Delivery Solutions</h2>
+        <p class="text-base leading-relaxed text-black/55">Engineered for the unique demands of Cambodia's growing urban centers and remote provincial landscapes.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center text-secondary mb-4">
+            <i class="fa-solid fa-route"></i>
+          </div>
+          <h4 class="font-display font-semibold text-lg text-primary mb-2">Urban Last-Mile</h4>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Swift, high-frequency urban delivery networks optimized for Phnom Penh and Siem Reap city centers.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Local Network Map →</a>
+        </div>
+        <div class="bg-white border border-primary/8 rounded-2xl p-7 hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center text-secondary mb-4">
+            <i class="fa-solid fa-box-tissue"></i>
+          </div>
+          <h4 class="font-display font-semibold text-lg text-primary mb-2">Specialized Local Cargo</h4>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Handling of sensitive items including agricultural tests, medical supplies, and luxury retail.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">View Specialized Fleet →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICES AND RATING ================= -->
+  <section class="bg-white py-24 sm:py-28" id="pricing">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-3xl mx-auto bg-white border border-primary/8 rounded-2xl p-6 md:p-8 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Pricing &amp; Rates</span>
+        <h2 class="font-display font-bold text-[clamp(24px,2.6vw,32px)] leading-tight text-primary mb-6">Prices and Rating</h2>
+
+        <div class="divide-y divide-primary/8 text-sm">
+          <div class="py-4 flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center gap-3">
+              <span class="text-primary font-medium">Domestic Parcel (Standard)</span>
+              <span class="text-secondary text-xs font-semibold inline-flex items-center gap-1"><i class="fa-solid fa-star"></i> 4.8</span>
+            </div>
+            <span class="font-display font-bold text-primary">From $2.50</span>
+          </div>
+          <div class="py-4 flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center gap-3">
+              <span class="text-primary font-medium">Provincial Freight (Per CBM)</span>
+              <span class="text-secondary text-xs font-semibold inline-flex items-center gap-1"><i class="fa-solid fa-star"></i> 4.9</span>
+            </div>
+            <span class="font-display font-bold text-primary">From $12.00</span>
+          </div>
+          <div class="py-4 flex justify-between items-center flex-wrap gap-2">
+            <div class="flex items-center gap-3">
+              <span class="text-primary font-medium">Storage (Per Pallet/Day)</span>
+              <span class="text-secondary text-xs font-semibold inline-flex items-center gap-1"><i class="fa-solid fa-star"></i> 4.7</span>
+            </div>
+            <span class="font-display font-bold text-primary">From $0.80</span>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <a href="../Auth/signup.html" class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 font-semibold text-[15px] text-white bg-secondary rounded-full hover:shadow-[0_8px_20px_-6px_rgba(0,186,52,0.45)] transition-shadow">
+            Get Local Quote
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-primary pt-20">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr] gap-10 pb-15 border-b border-white/12">
+
+        <div>
+          <a href="../../index.html" class="flex items-center gap-2 mb-4">
+            <img src="../../public/images/PorExpress-Logo.png" alt="Por Express" class="h-12 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <span class="hidden items-center gap-2 font-display font-bold text-lg text-white">
+              <span class="w-6 h-6 rounded-md bg-secondary/25 flex items-center justify-center text-secondary text-xs font-mono">P</span>
+              Por express
+            </span>
+          </a>
+          <p class="text-[13.5px] leading-relaxed text-accent/60 max-w-65 mb-5.5">Por Express is committed to delivering fast, secure, and reliable logistics solutions across Cambodia.</p>
+          <div class="flex gap-2.5">
+            <a href="#" aria-label="Facebook" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><path d="M22 4.01c-.8.36-1.66.6-2.56.71a4.4 4.4 0 001.94-2.43 8.8 8.8 0 01-2.8 1.07 4.4 4.4 0 00-7.5 4.01A12.5 12.5 0 013 3.13a4.4 4.4 0 001.36 5.87 4.4 4.4 0 01-2-.55v.06a4.4 4.4 0 003.53 4.31 4.4 4.4 0 01-2 .08 4.4 4.4 0 004.1 3.05A8.8 8.8 0 012 17.54a12.4 12.4 0 006.72 1.97c8.06 0 12.47-6.68 12.47-12.47l-.01-.57A8.9 8.9 0 0022 4.01z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 014 0V17m0 0v-4.5"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="w-8.5 h-8.5 border border-white/25 rounded-lg flex items-center justify-center opacity-70 hover:opacity-100 hover:border-secondary transition">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="w-[15px] h-[15px] text-accent"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4.5">Payment Methods</h4>
+          <ul class="flex flex-col gap-3">
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">PayPal</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Mobile Money</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Visa</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Mastercard</a></li>
+            <li><a href="#" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Bank Transfer</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4.5">Services</h4>
+          <ul class="flex flex-col gap-3">
+            <li><a href="#shipping-services" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Parcel Tracking</a></li>
+            <li><a href="#freight-options" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">International Shipping</a></li>
+            <li><a href="#shipping-services" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Express Delivery</a></li>
+            <li><a href="#freight-options" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Freight Services</a></li>
+            <li><a href="#delivery-solutions" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Local Delivery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4.5">Quick</h4>
+          <ul class="flex flex-col gap-3">
+            <li><a href="../../index.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Home</a></li>
+            <li><a href="service.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Services</a></li>
+            <li><a href="../shipment/shipment.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Shipments</a></li>
+            <li><a href="../company/company.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Company</a></li>
+            <li><a href="../support/support.html" class="text-sm text-accent/75 hover:opacity-100 hover:text-secondary transition">Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display text-lg font-semibold text-white mb-4.5">Contact us</h4>
+          <ul class="flex flex-col gap-3 mb-6">
+            <li class="text-sm text-accent/75">porexpress@gmail.com</li>
+            <li class="text-sm text-accent/75">+855 123 456 789</li>
+            <li class="text-sm text-accent/75">Veng Sreng, Phnom Penh, Cambodia</li>
+          </ul>
+          <h4 class="font-mono font-bold text-[11.5px] uppercase tracking-wide text-white mb-3">Sponsored and recognized by</h4>
+          <a href="#" class="flex items-center gap-2 opacity-90 hover:opacity-100 transition">
+            <img src="../../public/images/istad-logo.png" alt="ISTAD — Institute of Science and Technology Advanced Development" class="h-16 w-auto" onerror="this.style.display='none'">
+            <span class="font-display font-bold text-white text-lg"></span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="flex justify-between items-center py-6.5 flex-wrap gap-3">
+        <p class="font-mono text-[12.5px] text-accent/45">Copyright © 2026 Por Express Ltd.co</p>
+        <div class="flex gap-5.5 flex-wrap items-center text-[12.5px] text-accent/45">
+          <span>All Rights Reserved</span>
+          <a href="#" class="hover:opacity-80">Terms and Conditions</a>
+          <a href="#" class="hover:opacity-80">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/service.js" defer></script>
+  <script src="../../js/ui.js" defer></script>
+</body>
+
+</html>
