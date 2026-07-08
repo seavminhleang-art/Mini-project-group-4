@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POREXPRESSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="./service.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              logisticsDark: "#072b35",
+              logisticsGreen: "#00cc66",
+              logisticsLight: "#f4f7f6",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <span class="text-logisticsGreen text-2xl font-bold"
+            ><i class="fa-solid fa-truck-fast"></i> Por<span
+              class="text-logisticsDark"
+              >express</span
+            >
+          </span>
+        </div>
+        <div
+          class="hidden md:flex items-center gap-8 text-gray-600 font-medium"
+        >
+          <a href="#" class="hover:text-logisticsGreen transition">Home</a>
+          <a href="#" class="hover:text-logisticsGreen transition"
+            >Services <i class="fa-solid fa-chevron-down text-xs"></i
+          ></a>
+          <a href="#" class="hover:text-logisticsGreen transition"
+            >Shipments <i class="fa-solid fa-chevron-down text-xs"></i
+          ></a>
+          <a href="#" class="hover:text-logisticsGreen transition"
+            >Company <i class="fa-solid fa-chevron-down text-xs"></i
+          ></a>
+          <a href="#" class="hover:text-logisticsGreen transition"
+            >Support <i class="fa-solid fa-chevron-down text-xs"></i
+          ></a>
+        </div>
+        <div class="flex items-center gap-4">
+          <button
+            class="text-gray-700 font-medium hover:text-logisticsGreen transition"
+          >
+            Login
+          </button>
+          <button
+            class="bg-logisticsDark text-white px-5 py-2.5 rounded-md hover:bg-opacity-90 transition font-medium text-sm"
+          >
+            Get Started
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-logisticsDark text-white py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <span
+          class="text-logisticsGreen border border-logisticsGreen/30 bg-logisticsGreen/10 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider"
+          ><i class="fa-solid fa-gear mr-1"></i> Our Services</span
+        >
+        <h1 class="text-4xl md:text-6xl font-bold mt-6 leading-tight">
+          Our Logistics <span class="text-logisticsGreen">Solutions</span>
+        </h1>
+        <p class="text-gray-300 mt-4 max-w-xl text-lg">
+          Orchestrating high-precision supply chains across Cambodia with smart
+          infrastructure and nationwide connectivity.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <button
+            class="bg-logisticsGreen text-logisticsDark font-bold px-6 py-3 rounded shadow hover:bg-opacity-90 transition"
+          >
+            Get a Quote
+          </button>
+          <button
+            class="border border-white/30 text-white font-medium px-6 py-3 rounded hover:bg-white/10 transition"
+          >
+            Track Shipment
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+      <h2 class="text-logisticsGreen font-bold text-xl">
+        Cambodia Logistics Network
+      </h2>
+      <p class="text-gray-400 text-sm mt-1">Shipping Services</p>
+
+      <div class="mt-8 space-y-4">
+        <div
+          class="border border-gray-200 rounded-lg p-6 flex justify-between items-start hover:border-logisticsGreen transition cursor-pointer"
+        >
+          <div class="flex gap-4">
+            <div class="text-logisticsGreen text-xl mt-1">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Express Delivery</h4>
+              <p class="text-gray-500 text-sm mt-1">
+                Time-sensitive shipping that guarantees delivery within defined
+                windows. Perfect for high-priority documents and perishable
+                cargo.
+              </p>
+            </div>
+          </div>
+          <div class="text-gray-400">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </div>
+        </div>
+        <div
+          class="border border-gray-200 rounded-lg p-6 flex justify-between items-start hover:border-logisticsGreen transition cursor-pointer"
+        >
+          <div class="flex gap-4">
+            <div class="text-logisticsGreen text-xl mt-1">
+              <i class="fa-solid fa-truck"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Local Distribution</h4>
+              <p class="text-gray-500 text-sm mt-1">
+                High-frequency urban network providing same-day delivery within
+                Phnom Penh and next-day to major provincial cities.
+              </p>
+            </div>
+          </div>
+          <div class="text-gray-400">
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-logisticsLight py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-logisticsGreen font-bold text-xl mb-8">
+          Freight Infrastructure
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <div class="text-logisticsGreen text-2xl mb-4">
+              <i class="fa-solid fa-plane"></i>
+            </div>
+            <h4
+              class="text-xs font-bold text-logisticsGreen uppercase tracking-wider"
+            >
+              Local Air Cargo
+            </h4>
+            <p class="font-bold text-gray-900 text-sm mt-1">PP & SIEM REAP</p>
+            <p class="text-gray-500 text-xs mt-2">
+              Express air freight connections between Phnom Penh and Siem Reap
+              for time-critical assets and luxury goods.
+            </p>
+          </div>
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <div class="text-logisticsGreen text-2xl mb-4">
+              <i class="fa-solid fa-ship"></i>
+            </div>
+            <h4
+              class="text-xs font-bold text-logisticsGreen uppercase tracking-wider"
+            >
+              Intranational Sea Freight
+            </h4>
+            <p class="font-bold text-gray-900 text-sm mt-1">COASTAL & RIVER</p>
+            <p class="text-gray-500 text-xs mt-2">
+              Direct maritime services via Sihanoukville Port handling FCL/LCL
+              for industrial and bulk load requirements.
+            </p>
+          </div>
+          <div class="bg-white border border-gray-200 p-6 rounded-lg">
+            <div class="text-logisticsGreen text-2xl mb-4">
+              <i class="fa-solid fa-train"></i>
+            </div>
+            <h4
+              class="text-xs font-bold text-logisticsGreen uppercase tracking-wider"
+            >
+              Inter-Provincial Rail/Road
+            </h4>
+            <p class="font-bold text-gray-900 text-sm mt-1">
+              NATIONWIDE TRUCKING
+            </p>
+            <p class="text-gray-500 text-xs mt-2">
+              Heavy-duty transport solutions across the primary national road
+              network and domestic rail lines.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+      <div
+        class="border border-logisticsGreen rounded-2xl p-8 bg-white shadow-sm"
+      >
+        <h2 class="text-logisticsGreen font-bold text-xl">Smart Warehousing</h2>
+        <p class="text-gray-700 font-medium mt-2 max-w-3xl">
+          Our facilities are equipped with IoT-enabled climate control and
+          AI-driven inventory management systems.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 items-center">
+          <div class="space-y-6">
+            <div class="flex gap-4 items-start">
+              <div
+                class="bg-green-100 text-logisticsGreen p-3 rounded-lg text-xl"
+              >
+                <i class="fa-solid fa-temperature-arrow-down"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 text-sm">
+                  Climate-Controlled
+                </h4>
+                <p class="text-gray-500 text-xs mt-1">
+                  Precision storage for pharmaceuticals & perishables.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <div
+                class="bg-green-100 text-logisticsGreen p-3 rounded-lg text-xl"
+              >
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 text-sm">Live Inventory</h4>
+                <p class="text-gray-500 text-xs mt-1">
+                  Real-time SKU tracking with 99.9% accuracy.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-logisticsDark rounded-xl p-6 text-center text-white relative overflow-hidden min-h-[250px] flex flex-col justify-center items-center"
+          >
+            <h3 class="text-lg font-bold tracking-wider mb-2">
+              SMART WAREHOUSE MANAGEMENT SYSTEM
+            </h3>
+            <div class="text-5xl opacity-40 my-4">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <p class="text-xs text-gray-400 max-w-xs">
+              Interactive Blueprint & Monitoring System Active
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-logisticsLight py-16 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <h2 class="text-logisticsGreen font-bold text-xl">
+            Precision Delivery Solutions
+          </h2>
+          <p class="text-gray-600 text-xs mt-2 font-medium">
+            Engineered for the unique demands of Cambodia's growing urban
+            centers and remote provincial landscapes.
+          </p>
+        </div>
+
+        <div class="space-y-4 max-w-4xl mx-auto">
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <div class="text-logisticsGreen mb-2">
+              <i class="fa-solid fa-route"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 text-sm">Urban Last-Mile</h4>
+            <p class="text-gray-500 text-xs mt-1 mb-4">
+              Swift, high-frequency urban delivery networks optimized for Phnom
+              Penh and Siem Reap city centers.
+            </p>
+            <button
+              class="border border-gray-300 text-gray-700 text-xs font-bold px-4 py-2 rounded uppercase tracking-wider hover:border-logisticsGreen hover:text-logisticsGreen transition"
+            >
+              Local Network Map
+            </button>
+          </div>
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <div class="text-logisticsGreen mb-2">
+              <i class="fa-solid fa-box-tissue"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 text-sm">
+              Specialized Local Cargo
+            </h4>
+            <p class="text-gray-500 text-xs mt-1 mb-4">
+              Handling of sensitive items including agricultural tests, medical
+              supplies, and luxury retail.
+            </p>
+            <button
+              class="border border-gray-300 text-gray-700 text-xs font-bold px-4 py-2 rounded uppercase tracking-wider hover:border-logisticsGreen hover:text-logisticsGreen transition"
+            >
+              View Specialized Fleet
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 max-w-7xl mx-auto">
+      <div class="border border-gray-200 rounded-2xl p-6 md:p-8">
+        <h2 class="text-logisticsGreen font-bold text-xl mb-6">
+          Prices and Rating
+        </h2>
+        <div class="divide-y divide-gray-100 text-sm">
+          <div class="py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <span class="text-gray-900 font-medium"
+                >Domestic Parcel (Standard)</span
+              >
+              <span class="text-amber-500 text-xs font-semibold"
+                ><i class="fa-solid fa-star"></i> 4.8</span
+              >
+            </div>
+            <span class="font-bold text-gray-900">FROM $2.50</span>
+          </div>
+          <div class="py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <span class="text-gray-900 font-medium"
+                >Provincial Freight (Per CBM)</span
+              >
+              <span class="text-amber-500 text-xs font-semibold"
+                ><i class="fa-solid fa-star"></i> 4.9</span
+              >
+            </div>
+            <span class="font-bold text-gray-900">FROM $12.00</span>
+          </div>
+          <div class="py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+              <span class="text-gray-900 font-medium"
+                >Storage (Per Pallet/Day)</span
+              >
+              <span class="text-amber-500 text-xs font-semibold"
+                ><i class="fa-solid fa-star"></i> 4.7</span
+              >
+            </div>
+            <span class="font-bold text-gray-900">FROM $0.80</span>
+          </div>
+        </div>
+        <div class="mt-6 text-center">
+          <button
+            class="w-full flex items-center justify-center gap-2 py-3.5 px-6 bg-transparent text-[#00cc66] font-bold text-base border border-[#00cc66] rounded-full transition-all duration-200 hover:bg-[#00cc66] hover:text-white"
+          >
+            Get Local Quote
+            <svg
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                d="M5 12h14M12 5l7 7-7 7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-logisticsDark text-gray-300 pt-16 pb-8 px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8 border-b border-white/10 pb-12"
+      >
+        <div class="col-span-2 md:col-span-1">
+          <span class="text-logisticsGreen text-xl font-bold"
+            ><i class="fa-solid fa-truck-fast"></i> PDR</span
+          >
+          <p class="text-xs text-gray-400 mt-4 leading-relaxed">
+            PDR Express is committed to delivering fast, secure, and reliable
+            logistics solutions across Cambodia.
+          </p>
+          <div class="flex gap-4 mt-4 text-gray-400 text-sm">
+            <a href="#" class="hover:text-white"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-white"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-white"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-white"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h5
+            class="text-white text-xs font-bold uppercase tracking-wider mb-4"
+          >
+            Payment Methods
+          </h5>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li>PayPal</li>
+            <li>Mobile Money</li>
+            <li>Visa</li>
+            <li>Mastercard</li>
+            <li>Bank Transfer</li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="text-white text-xs font-bold uppercase tracking-wider mb-4"
+          >
+            Services
+          </h5>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li>Parcel Tracking</li>
+            <li>International Shipping</li>
+            <li>Express Delivery</li>
+            <li>Freight Services</li>
+            <li>Local Delivery</li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="text-white text-xs font-bold uppercase tracking-wider mb-4"
+          >
+            Quick
+          </h5>
+          <ul class="space-y-2 text-xs text-gray-400">
+            <li>Home</li>
+            <li>Services</li>
+            <li>Shipments</li>
+            <li>Company</li>
+            <li>Support</li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="text-white text-xs font-bold uppercase tracking-wider mb-4"
+          >
+            Contacts us
+          </h5>
+          <p class="text-xs text-gray-400 break-all">pdrexpress@gmail.com</p>
+          <p class="text-xs text-gray-400 mt-1">+855 123 456 789</p>
+          <p class="text-xs text-gray-400 mt-1">Veng Sreng, Phnom Penh</p>
+
+          <div class="mt-4 pt-4 border-t border-white/10">
+            <p class="text-[10px] text-gray-500 uppercase tracking-wider mb-1">
+              Sponsored and Organized
+            </p>
+            <div
+              class="flex items-center gap-1 font-bold text-white tracking-widest text-sm"
+            >
+              <span class="text-red-500"
+                ><i class="fa-solid fa-graduation-cap"></i
+              ></span>
+              ISTAD
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between text-[11px] text-gray-500"
+      >
+        <p>Copyright © 2026 PDR Express Ltd. co</p>
+        <p>
+          All Rights Reserved |
+          <a href="#" class="hover:underline">Terms and Conditions</a> |
+          <a href="#" class="hover:underline">Privacy Policy</a>
+        </p>
+      </div>
+    </footer>​
+  </body>
+</html>
