@@ -112,6 +112,20 @@ html.dark .nav-login-link:hover {
   color: var(--color-secondary) !important;
 }
 
+/* --- Logo swap: the default logo's navy "express" wordmark disappears
+   against the dark surfaces dark mode flips backgrounds to (nav pill,
+   Auth panel), so swap in the white-wordmark variant. Same show/hide
+   pattern as the theme-toggle icons below. --- */
+.logo-dark {
+  display: none;
+}
+html.dark .logo-light {
+  display: none;
+}
+html.dark .logo-dark {
+  display: block;
+}
+
 /* --- Theme-toggle icon swap (moon in light, sun in dark) --- */
 .theme-sun {
   display: none;
