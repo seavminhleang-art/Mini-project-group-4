@@ -103,6 +103,15 @@ html.dark .hover\:bg-accent:hover {
   background-color: #0a1621 !important;
 }
 
+/* --- Nav "Login" link: pick up the accent (secondary green) color on
+   hover in dark mode instead of the default lightened-primary tone,
+   so it reads as a distinct interactive highlight against the dark
+   navbar. Scoped to .nav-login-link only (not hover:text-primary
+   globally) so dropdown items and other hover states are unaffected. --- */
+html.dark .nav-login-link:hover {
+  color: var(--color-secondary) !important;
+}
+
 /* --- Theme-toggle icon swap (moon in light, sun in dark) --- */
 .theme-sun {
   display: none;
