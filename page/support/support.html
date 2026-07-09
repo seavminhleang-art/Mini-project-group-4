@@ -246,7 +246,7 @@
   </section>
 
   <!-- ================= REPORT AN ISSUE ================= -->
-  <section class="bg-accent py-24 sm:py-28" id="report">
+ <section class="bg-accent py-24 sm:py-28" id="report">
     <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
       <div class="max-w-[640px] mb-14">
         <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Track it</span>
@@ -266,21 +266,25 @@
     </div>
 
     <div class="grid grid-cols-2 gap-3.5 flex-1" id="quick-categories">
-      <button type="button" data-category="Delayed delivery" class="quick-category flex items-center gap-2.5 bg-white rounded-xl p-4 text-left border-[1.5px] border-transparent transition w-full h-full">
+      <button type="button" data-category="Delayed delivery" class="quick-category flex flex-col items-start gap-2.5 bg-white rounded-xl p-4 text-left border border-black/15 hover:border hover:border-secondary transition w-full h-full">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-[18px] h-[18px] text-primary shrink-0"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
         <span class="text-[13.5px] font-medium text-primary">Delayed delivery</span>
+        <span class="text-xs leading-relaxed text-black/50">If your shipment is taking longer than expected, let us investigate and keep you informed every step of the way.</span>
       </button>
-      <button type="button" data-category="Damaged shipment" class="quick-category flex items-center gap-2.5 bg-white rounded-xl p-4 text-left border-[1.5px] border-transparent transition w-full h-full">
+      <button type="button" data-category="Damaged shipment" class="quick-category flex flex-col items-start gap-2.5 bg-white rounded-xl p-4 text-left border border-black/15 hover:border hover:border-secondary transition w-full h-full">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-[18px] h-[18px] text-primary shrink-0"><path d="M21 16.5v-9L12 3 3 7.5v9L12 21z"/><path d="M3.5 7.3L12 12l8.5-4.7M12 12v9"/></svg>
         <span class="text-[13.5px] font-medium text-primary">Damaged shipment</span>
+        <span class="text-xs leading-relaxed text-black/50">Help us assess shipping damage by submitting details and supporting images of the affected package.</span>
       </button>
-      <button type="button" data-category="Missing package" class="quick-category flex items-center gap-2.5 bg-white rounded-xl p-4 text-left border-[1.5px] border-transparent transition w-full h-full">
+      <button type="button" data-category="Missing package" class="quick-category flex flex-col items-start gap-2.5 bg-white rounded-xl p-4 text-left border border-black/15 hover:border hover:border-secondary transition w-full h-full">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-[18px] h-[18px] text-primary shrink-0"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
         <span class="text-[13.5px] font-medium text-primary">Missing package</span>
+        <span class="text-xs leading-relaxed text-black/50">If your package hasn't arrived or appears lost, we'll investigate with our delivery network.</span>
       </button>
-      <button type="button" data-category="Bill issues" class="quick-category flex items-center gap-2.5 bg-white rounded-xl p-4 text-left border-[1.5px] border-transparent transition w-full h-full">
+      <button type="button" data-category="Bill issues" class="quick-category flex flex-col items-start gap-2.5 bg-white rounded-xl p-4 text-left border border-black/15 hover:border hover:border-secondary transition w-full h-full">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-[18px] h-[18px] text-primary shrink-0"><path d="M9 12h6M9 16h6M9 8h6M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg>
         <span class="text-[13.5px] font-medium text-primary">Bill issues</span>
+        <span class="text-xs leading-relaxed text-black/50">Need help with invoices, payments, refunds, or unexpected charges? Our billing specialists are here to assist.</span>
       </button>
     </div>
   </div>
@@ -291,23 +295,23 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="w-full">
           <label for="report-name" class="block text-sm font-medium text-primary/70 mb-1.5">Full Name</label>
-          <input type="text" id="report-name" name="name" required class="form-input w-full" placeholder="leang seavminh">
+          <input type="text" id="report-name" name="name" required class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="leang seavminh">
         </div>
         <div class="w-full">
           <label for="report-email" class="block text-sm font-medium text-primary/70 mb-1.5">Email</label>
-          <input type="email" id="report-email" name="email" required class="form-input w-full" placeholder="seavminhleang@gmail.com">
+          <input type="email" id="report-email" name="email" required class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="seavminhleang@gmail.com">
         </div>
       </div>
 
       <div class="w-full">
         <label for="report-tracking" class="block text-sm font-medium text-primary/70 mb-1.5">Shipment tracking number</label>
-        <input type="text" id="report-tracking" name="tracking" class="form-input w-full" placeholder="100010">
+        <input type="text" id="report-tracking" name="tracking" class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="100010">
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="w-full">
           <label for="report-category" class="block text-sm font-medium text-primary/70 mb-1.5">Issue category</label>
-          <select id="report-category" name="category" class="form-input w-full">
+          <select id="report-category" name="category" class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition">
             <option value="">Select a category</option>
             <option>Delayed delivery</option>
             <option>Damaged shipment</option>
@@ -317,7 +321,7 @@
         </div>
         <div class="w-full">
           <label for="report-priority" class="block text-sm font-medium text-primary/70 mb-1.5">Priority level</label>
-          <select id="report-priority" name="priority" class="form-input w-full">
+          <select id="report-priority" name="priority" class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition">
             <option value="">Select priority</option>
             <option>Low</option>
             <option>Medium</option>
@@ -329,7 +333,7 @@
 
       <div class="w-full flex-1 flex flex-col">
         <label for="report-description" class="block text-sm font-medium text-primary/70 mb-1.5">Description</label>
-        <textarea id="report-description" name="description" class="form-input w-full resize-none flex-1 min-h-[100px]" placeholder="Detail about your issues or feedback"></textarea>
+        <textarea id="report-description" name="description" class="form-input w-full resize-none flex-1 min-h-[100px] border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="Detail about your issues or feedback"></textarea>
       </div>
 
       <div class="w-full">
@@ -347,12 +351,10 @@
   </div>
 
 </div>
-
     </div>
   </section>
-
   <!-- ================= HELP CENTER ================= -->
-  <section class="bg-white py-24 sm:py-28" id="help-center">
+  <!-- <section class="bg-white py-24 sm:py-28" id="help-center">
     <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
       <div class="max-w-[640px] mb-14">
         <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Self-serve</span>
@@ -362,7 +364,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
-        <div class="bg-white border border-primary/8 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+        <div class="bg-white rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
           <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
           </div>
@@ -371,7 +373,7 @@
           <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
         </div>
 
-        <div class="bg-white border border-primary/8 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+        <div class="bg-white rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
           <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><rect x="1" y="10" width="14" height="7"/><path d="M15 13h4l3 3v1h-7"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
           </div>
@@ -380,7 +382,7 @@
           <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
         </div>
 
-        <div class="bg-white border border-primary/8 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+        <div class="bg-white rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
           <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><path d="M9 12h6M9 16h6M9 8h6M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg>
           </div>
@@ -389,7 +391,7 @@
           <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
         </div>
 
-        <div class="bg-white border border-primary/8 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+        <div class="bg-white rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
           <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><path d="M21 11.5a8.5 8.5 0 10-2.6 6.1M21 6v5.5h-5.5"/></svg>
           </div>
@@ -398,7 +400,7 @@
           <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
         </div>
 
-        <div class="bg-white border border-primary/8 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+        <div class="bg-white rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
           <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 9h20"/></svg>
           </div>
@@ -407,7 +409,74 @@
           <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
         </div>
 
-        <div class="bg-white border border-primary/8 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] hover:shadow-[0_20px_45px_-30px_rgba(18,39,51,0.3)] hover:-translate-y-0.75 transition">
+        <div class="bg-white rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.7-2.5 1.8-2.5 3.5"/><circle cx="12" cy="16.5" r="0.6" fill="currentColor"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Frequently asked questions</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Quick answers to the questions we hear most and resolve our customer issues.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
+        </div>
+
+      </div>
+    </div>
+  </section> -->
+    <section class="bg-white py-24 sm:py-28" id="help-center">
+    <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
+      <div class="max-w-[640px] mb-14">
+        <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Self-serve</span>
+        <h2 class="font-display font-bold text-[clamp(28px,3vw,38px)] leading-tight text-primary mb-3.5">Help Center</h2>
+        <p class="text-base leading-relaxed text-black/55">Guides and answers for the most common questions.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="bg-white border border-secondary/20 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Shipment tracking guide</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Everything you need to know about tracking your shipment in real time.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
+        </div>
+
+        <div class="bg-white border border-secondary/20 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><rect x="1" y="10" width="14" height="7"/><path d="M15 13h4l3 3v1h-7"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Shipping services</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">An overview of our freight, ground, and express delivery options.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
+        </div>
+
+        <div class="bg-white border border-secondary/20 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><path d="M9 12h6M9 16h6M9 8h6M5 4h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5a1 1 0 011-1z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Delivery policies</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Cutoff times, delivery windows, and signature requirements.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
+        </div>
+
+        <div class="bg-white border border-secondary/20 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><path d="M21 11.5a8.5 8.5 0 10-2.6 6.1M21 6v5.5h-5.5"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Returns &amp; claims</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">How to file a claim for a damaged, lost, or returned shipment.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
+        </div>
+
+        <div class="bg-white border border-secondary/20 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
+          <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 9h20"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg text-primary mb-2.5">Payment information</h3>
+          <p class="text-sm leading-relaxed text-black/55 mb-4">Accepted payment methods, invoicing, and billing cycles.</p>
+          <a href="#" class="text-[13px] font-semibold text-secondary inline-flex items-center gap-1.5">Learn more →</a>
+        </div>
+
+        <div class="bg-white border border-secondary/20 rounded-2xl p-7 shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
           <div class="w-10 h-10 rounded-[10px] bg-secondary/15 flex items-center justify-center mb-4.5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="w-[19px] h-[19px] text-primary"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.7-2.5 1.8-2.5 3.5"/><circle cx="12" cy="16.5" r="0.6" fill="currentColor"/></svg>
           </div>
@@ -419,9 +488,8 @@
       </div>
     </div>
   </section>
-
   <!-- ================= CONTACT US ================= -->
-  <section class="bg-accent py-24 sm:py-28" id="contact">
+ <section class="bg-accent py-24 sm:py-28" id="contact">
     <div class="max-w-[1240px] mx-auto px-5 sm:px-8">
       <div class="max-w-[640px] mb-14">
         <span class="block font-mono text-xs uppercase tracking-wide text-secondary mb-3.5">Get in touch</span>
@@ -479,33 +547,33 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="w-full">
           <label for="contact-name" class="block text-sm font-medium text-primary/70 mb-1.5">Full Name</label>
-          <input type="text" id="contact-name" name="name" required class="form-input w-full" placeholder="Jame sok">
+          <input type="text" id="contact-name" name="name" required class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="Jame sok">
         </div>
         <div class="w-full">
           <label for="contact-email" class="block text-sm font-medium text-primary/70 mb-1.5">Email Address</label>
-          <input type="email" id="contact-email" name="email" required class="form-input w-full" placeholder="sok168@gmail.com">
+          <input type="email" id="contact-email" name="email" required class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="sok168@gmail.com">
         </div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="w-full">
           <label for="contact-phone" class="block text-sm font-medium text-primary/70 mb-1.5">Phone Number</label>
-          <input type="tel" id="contact-phone" name="phone" class="form-input w-full" placeholder="012346789">
+          <input type="tel" id="contact-phone" name="phone" class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="012346789">
         </div>
         <div class="w-full">
           <label for="contact-subject" class="block text-sm font-medium text-primary/70 mb-1.5">Subject</label>
-          <input type="text" id="contact-subject" name="subject" class="form-input w-full" placeholder="Delayed shipment inquiry">
+          <input type="text" id="contact-subject" name="subject" class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="Delayed shipment inquiry">
         </div>
       </div>
 
       <div class="w-full">
         <label for="contact-tracking" class="block text-sm font-medium text-primary/70 mb-1.5">Tracking Number (optional)</label>
-        <input type="text" id="contact-tracking" name="tracking" class="form-input w-full" placeholder="PX-2026-100010">
+        <input type="text" id="contact-tracking" name="tracking" class="form-input w-full border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="PX-2026-100010">
       </div>
 
       <div class="w-full flex-1 flex flex-col">
         <label for="contact-message" class="block text-sm font-medium text-primary/70 mb-1.5">Message</label>
-        <textarea id="contact-message" name="message" required class="form-input w-full resize-none h-40 flex-1" placeholder="Send message"></textarea>
+        <textarea id="contact-message" name="message" required class="form-input w-full resize-none h-40 flex-1 border border-black/15 rounded-xl px-4 py-2.5 outline-none focus:border-2 focus:border-primary focus:px-[15px] focus:py-[9px] transition" placeholder="Send message"></textarea>
       </div>
 
       <button type="submit" class="w-full inline-flex items-center justify-center font-semibold text-[15px] text-white bg-secondary px-7 py-3.5 rounded-full hover:shadow-[0_8px_20px_-6px_rgba(0,186,52,0.45)] transition-shadow">Send Message</button>
@@ -513,7 +581,6 @@
   </div>
 
 </div>
-
     </div>
   </section>
 
