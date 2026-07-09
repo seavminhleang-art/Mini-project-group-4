@@ -15,6 +15,3 @@ dist/
 
 # Ignore generated Tailwind output (build artifact, run the build to regenerate)
 src/output.css
-
-# Ignore lockfile
-package-lock.json
