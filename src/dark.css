@@ -37,6 +37,15 @@ html.dark .bg-primary {
   background-color: #0a1621 !important;
 }
 
+/* Same gap as hover:text-primary below: hover:bg-accent is its own
+   compiled selector (.hover\:bg-accent:hover), so the .bg-accent
+   override above never touched it. On hover, nav items/dropdown rows
+   were falling back to the light-mode accent color (#E5E5E5) -
+   a light pill sitting on the dark navbar with near-invisible text. */
+html.dark .hover\:bg-accent:hover {
+  background-color: #0f2836 !important;
+}
+
 /* --- Primary text sits on (now dark) light surfaces -> lighten --- */
 html.dark .text-primary {
   color: #e9eff3 !important;
@@ -45,14 +54,76 @@ html.dark [class~="text-primary/75"] {
   color: rgba(233, 239, 243, 0.75) !important;
 }
 
-/* --- Borders that used dark primary -> subtle light --- */
+/* Nav links/dropdown items switch to text-primary on hover. That's a
+   separate compiled selector (.hover\:text-primary:hover), not just
+   .text-primary, so the override above never reached it: on hover the
+   text fell back to the original dark navy, invisible against the
+   also-dark hover background. */
+html.dark .hover\:text-primary:hover {
+  color: #e9eff3 !important;
+}
+
+/* --- Borders that used dark primary -> subtle light ---
+   Bumped up from an earlier 0.14 alpha: at that strength borders on
+   cards/buttons were basically invisible against the dark surfaces,
+   which is what made everything look edge-less/flat. */
 html.dark .border-primary,
 html.dark [class~="border-primary/5"],
 html.dark [class~="border-primary/8"],
+html.dark [class~="border-primary/10"],
 html.dark [class~="border-primary/15"],
 html.dark [class~="border-primary/20"],
 html.dark [class~="border-primary/25"] {
-  border-color: rgba(233, 239, 243, 0.14) !important;
+  border-color: rgba(233, 239, 243, 0.22) !important;
+}
+
+/* --- Cards that rely only on box-shadow for definition ---
+   A soft dark navy shadow (designed for a white background) reads as
+   pure black-on-black once the surface behind it is also dark, so
+   those cards visually disappear. Give every white/accent surface a
+   default hairline border in dark mode as a safety net; explicit
+   border-primary/N classes above still win (!important) wherever a
+   page already sets its own. */
+html.dark .bg-white,
+html.dark .bg-accent {
+  border: 1px solid rgba(233, 239, 243, 0.14);
+}
+
+/* Allow green hover borders in Dark Mode */
+html.dark .hover\:border-secondary:hover {
+  border-color: var(--color-secondary) !important;
+}
+
+/* --- Hover pill: bg-accent hover states default to the light-mode
+   accent color, which reads wrong once the surface underneath has
+   flipped dark. Route the hover fill through the same dark-primary
+   tone already used for .bg-primary so nav pills, dropdown items,
+   and the mobile menu links all pick up a proper dark highlight. --- */
+html.dark .hover\:bg-accent:hover {
+  background-color: #0a1621 !important;
+}
+
+/* --- Nav "Login" link: pick up the accent (secondary green) color on
+   hover in dark mode instead of the default lightened-primary tone,
+   so it reads as a distinct interactive highlight against the dark
+   navbar. Scoped to .nav-login-link only (not hover:text-primary
+   globally) so dropdown items and other hover states are unaffected. --- */
+html.dark .nav-login-link:hover {
+  color: var(--color-secondary) !important;
+}
+
+/* --- Logo swap: the default logo's navy "express" wordmark disappears
+   against the dark surfaces dark mode flips backgrounds to (nav pill,
+   Auth panel), so swap in the white-wordmark variant. Same show/hide
+   pattern as the theme-toggle icons below. --- */
+.logo-dark {
+  display: none;
+}
+html.dark .logo-light {
+  display: none;
+}
+html.dark .logo-dark {
+  display: block;
 }
 
 /* --- Theme-toggle icon swap (moon in light, sun in dark) --- */

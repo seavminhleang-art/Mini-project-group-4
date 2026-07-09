@@ -2,4 +2,15 @@ node_modules/
 dist/
 build/
 .env
-.vscode/
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+
+# Ignore build folder
+dist/
+
+# Ignore generated Tailwind output (build artifact, run the build to regenerate)
+src/output.css
