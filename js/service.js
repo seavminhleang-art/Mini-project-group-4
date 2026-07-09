@@ -1,43 +1,8 @@
-// js/service.js — nav dropdown toggle (same pattern as js/home.js, js/company.js, js/support.js)
-const navItems = document.querySelectorAll('.nav-item');
-
-navItems.forEach((item) => {
-  const trigger = item.querySelector('.nav-trigger');
-  if (!trigger) return;
-
-  trigger.addEventListener('click', (e) => {
-    e.preventDefault();
-    const isOpen = item.classList.contains('open');
-
-    navItems.forEach((i) => {
-      i.classList.remove('open');
-      const t = i.querySelector('.nav-trigger');
-      if (t) t.setAttribute('aria-expanded', 'false');
-    });
-
-    if (!isOpen) {
-      item.classList.add('open');
-      trigger.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
-
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.nav-item')) {
-    navItems.forEach((i) => {
-      i.classList.remove('open');
-      const t = i.querySelector('.nav-trigger');
-      if (t) t.setAttribute('aria-expanded', 'false');
-    });
-  }
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    navItems.forEach((i) => {
-      i.classList.remove('open');
-      const t = i.querySelector('.nav-trigger');
-      if (t) t.setAttribute('aria-expanded', 'false');
-    });
-  }
-});
+// js/service.js — nav dropdown toggle
+//
+// The top-level Services/Shipments/Company/Support pills are real <a href>
+// links (clicking one navigates straight to that page), so the dropdown
+// preview no longer needs a JS-managed .open state — it's shown purely via
+// the group-hover:/group-focus-within: CSS on .dropdown-panel in the page's
+// <head> markup. This file is intentionally left with no nav logic; kept as
+// a stable include so the page doesn't need an extra edit if that changes.
