@@ -94,6 +94,14 @@ html.dark .hover\:border-secondary:hover {
   border-color: var(--color-secondary) !important;
 }
 
+/* Buttons on bg-primary (e.g. Login/Register submit buttons) that hover to
+   bg-secondary: the dark-mode .bg-primary override above is !important, so
+   without this the non-!important hover:bg-secondary utility never wins and
+   the button stays navy on hover instead of switching to green. */
+html.dark .hover\:bg-secondary:hover {
+  background-color: var(--color-secondary) !important;
+}
+
 /* --- Hover pill: bg-accent hover states default to the light-mode
    accent color, which reads wrong once the surface underneath has
    flipped dark. Route the hover fill through the same dark-primary
