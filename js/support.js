@@ -1,49 +1,5 @@
 // js/support.js — Support page behavior
 
-// ---- Nav dropdown toggle (copied from js/home.js, unchanged) ----
-const navItems = document.querySelectorAll('.nav-item');
-
-navItems.forEach((item) => {
-  const trigger = item.querySelector('.nav-trigger');
-  if (!trigger) return;
-
-  trigger.addEventListener('click', (e) => {
-    e.preventDefault();
-    const isOpen = item.classList.contains('open');
-
-    navItems.forEach((i) => {
-      i.classList.remove('open');
-      const t = i.querySelector('.nav-trigger');
-      if (t) t.setAttribute('aria-expanded', 'false');
-    });
-
-    if (!isOpen) {
-      item.classList.add('open');
-      trigger.setAttribute('aria-expanded', 'true');
-    }
-  });
-});
-
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.nav-item')) {
-    navItems.forEach((i) => {
-      i.classList.remove('open');
-      const t = i.querySelector('.nav-trigger');
-      if (t) t.setAttribute('aria-expanded', 'false');
-    });
-  }
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    navItems.forEach((i) => {
-      i.classList.remove('open');
-      const t = i.querySelector('.nav-trigger');
-      if (t) t.setAttribute('aria-expanded', 'false');
-    });
-  }
-});
-
 // ---- Report an Issue: quick-category selector cards ----
 const quickCategoryButtons = document.querySelectorAll('.quick-category');
 const reportCategorySelect = document.getElementById('report-category');

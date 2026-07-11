@@ -94,6 +94,14 @@ html.dark .hover\:border-secondary:hover {
   border-color: var(--color-secondary) !important;
 }
 
+/* Buttons on bg-primary (e.g. Login/Register submit buttons) that hover to
+   bg-secondary: the dark-mode .bg-primary override above is !important, so
+   without this the non-!important hover:bg-secondary utility never wins and
+   the button stays navy on hover instead of switching to green. */
+html.dark .hover\:bg-secondary:hover {
+  background-color: var(--color-secondary) !important;
+}
+
 /* --- Hover pill: bg-accent hover states default to the light-mode
    accent color, which reads wrong once the surface underneath has
    flipped dark. Route the hover fill through the same dark-primary
@@ -101,6 +109,29 @@ html.dark .hover\:border-secondary:hover {
    and the mobile menu links all pick up a proper dark highlight. --- */
 html.dark .hover\:bg-accent:hover {
   background-color: #0a1621 !important;
+}
+
+/* --- Nav "Login" link: pick up the accent (secondary green) color on
+   hover in dark mode instead of the default lightened-primary tone,
+   so it reads as a distinct interactive highlight against the dark
+   navbar. Scoped to .nav-login-link only (not hover:text-primary
+   globally) so dropdown items and other hover states are unaffected. --- */
+html.dark .nav-login-link:hover {
+  color: var(--color-secondary) !important;
+}
+
+/* --- Logo swap: the default logo's navy "express" wordmark disappears
+   against the dark surfaces dark mode flips backgrounds to (nav pill,
+   Auth panel), so swap in the white-wordmark variant. Same show/hide
+   pattern as the theme-toggle icons below. --- */
+.logo-dark {
+  display: none;
+}
+html.dark .logo-light {
+  display: none;
+}
+html.dark .logo-dark {
+  display: block;
 }
 
 /* --- Theme-toggle icon swap (moon in light, sun in dark) --- */

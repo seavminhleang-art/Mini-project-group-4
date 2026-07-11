@@ -31,7 +31,8 @@
 
       <a href="../../index.html" class="flex items-center gap-2 h-full py-2 shrink-0">
         <span class="block h-9 sm:h-10 w-28 sm:w-32">
-          <img src="../../public/images/PorExpress-Logo.png" alt="Por Express" class="h-full w-full object-contain object-left" onerror="this.parentElement.style.display='none'; this.closest('a').querySelector('span.hidden').style.display='flex'">
+          <img src="../../public/images/PorExpress-Logo.png" alt="Por Express" class="logo-light h-full w-full object-contain object-left" onerror="this.parentElement.style.display='none'; this.closest('a').querySelector('span.hidden').style.display='flex'">
+          <img src="../../public/images/Por-express-logo-darkmode.png" alt="Por Express" class="logo-dark h-full w-full object-contain object-left" onerror="this.parentElement.style.display='none'; this.closest('a').querySelector('span.hidden').style.display='flex'">
         </span>
         <span class="hidden items-center gap-2 font-display font-bold text-lg text-primary">
           <span class="w-6 h-6 rounded-md bg-secondary/15 flex items-center justify-center text-secondary text-xs font-mono">P</span>
@@ -112,8 +113,8 @@
           <svg class="theme-moon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
           <svg class="theme-sun w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
-        <a href="../Auth/login.html" class="hidden lg:inline-block text-sm font-medium text-primary/75 hover:text-primary px-1 py-2.5">Login</a>
-        <a href="#" class="hidden lg:inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5.5 py-3 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(18,39,51,0.5)] transition-shadow whitespace-nowrap">Get Started</a>
+        <a href="../Auth/login.html" class="nav-login-link hidden lg:inline-block text-sm font-medium text-primary/75 hover:text-primary px-1 py-2.5">Login</a>
+        <a href="../Auth/signup.html" class="hidden lg:inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5.5 py-3 rounded-full hover:shadow-[0_8px_20px_-8px_rgba(18,39,51,0.5)] transition-shadow whitespace-nowrap">Get Started</a>
         <button id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full text-primary hover:bg-accent transition-colors">
           <svg class="nav-open w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg class="nav-close w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
@@ -131,7 +132,7 @@
         <a href="../support/support.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Support</a>
         <div class="h-px bg-primary/10 my-2"></div>
         <a href="../Auth/login.html" class="text-sm font-medium text-primary px-3 py-2.5 rounded-lg hover:bg-accent transition-colors">Login</a>
-        <a href="#" class="mt-1 inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5 py-3 rounded-full">Get Started</a>
+        <a href="../Auth/signup.html" class="mt-1 inline-flex items-center justify-center font-semibold text-sm text-white bg-primary px-5 py-3 rounded-full">Get Started</a>
       </nav>
     </div>
   </header>
@@ -554,14 +555,14 @@
       <div class="text-center mb-8">
         <span class="font-display font-bold text-3xl sm:text-4xl text-secondary">Mentor</span>
       </div>
-      <div class="max-w-[280px] mx-auto mb-20">
+      <div class="max-w-[240px] mx-auto mb-20">
         <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
-          <div class="aspect-[3/4] bg-primary/10 relative">
+          <div class="aspect-[4/5] bg-primary/10 relative">
             <img src="../../public/TeamMembers/Mentor%20(3).JPG" alt="Srorng Sokcheat" class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
             <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-3xl">SS</div>
           </div>
-          <div class="px-5 py-4">
+          <div class="px-4 py-3.5">
             <div class="text-[12px] font-mono text-black/45 mb-1">Lecturer</div>
             <div class="font-display font-bold text-lg text-primary">Srorng Sokcheat</div>
           </div>
@@ -573,130 +574,130 @@
         <span class="font-display font-bold text-3xl sm:text-4xl text-secondary">Team Members</span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
-          <div class="aspect-[3/4] bg-primary/10 relative">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] max-w-[85%] mx-auto">
+          <div class="aspect-[4/5] bg-primary/10 relative">
             <img src="../../public/TeamMembers/Leakna.jpg" alt="Heng Soleakna" class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-2xl">HS</div>
+            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-xl">HS</div>
           </div>
-          <div class="px-5 py-4">
-            <div class="text-[11.5px] font-mono text-black/45 mb-1">Team · 01</div>
-            <div class="font-display font-bold text-[17px] text-primary mb-1">Heng Soleakna</div>
-            <div class="font-mono text-[12.5px] font-semibold text-secondary mb-3">Leader</div>
+          <div class="px-3.5 py-3">
+            <div class="text-[9px] font-mono text-black/45 mb-1">Team · 01</div>
+            <div class="font-display font-bold text-[13px] text-primary mb-1">Heng Soleakna</div>
+            <div class="font-mono text-[10px] font-semibold text-secondary mb-2.5">Leader</div>
             <div class="flex gap-2">
-              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
-              <a href="#" aria-label="Telegram" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
-              <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+              <a href="#" aria-label="Facebook" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+              <a href="#" aria-label="Telegram" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
+              <a href="#" aria-label="GitHub" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
-          <div class="aspect-[3/4] bg-primary/10 relative">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] max-w-[85%] mx-auto">
+          <div class="aspect-[4/5] bg-primary/10 relative">
             <img src="../../public/TeamMembers/Hokchheng.JPG" alt="Chhun Hokchheng" class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-2xl">CH</div>
+            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-xl">CH</div>
           </div>
-          <div class="px-5 py-4">
-            <div class="text-[11.5px] font-mono text-black/45 mb-1">Team · 02</div>
-            <div class="font-display font-bold text-[17px] text-primary mb-1">Chhun Hokchheng</div>
-            <div class="font-mono text-[12.5px] font-semibold text-secondary mb-3">Sub · Leader</div>
+          <div class="px-3.5 py-3">
+            <div class="text-[9px] font-mono text-black/45 mb-1">Team · 02</div>
+            <div class="font-display font-bold text-[13px] text-primary mb-1">Chhun Hokchheng</div>
+            <div class="font-mono text-[10px] font-semibold text-secondary mb-2.5">Sub · Leader</div>
             <div class="flex gap-2">
-              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
-              <a href="#" aria-label="Telegram" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
-              <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+              <a href="#" aria-label="Facebook" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+              <a href="#" aria-label="Telegram" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
+              <a href="#" aria-label="GitHub" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
-          <div class="aspect-[3/4] bg-primary/10 relative">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] max-w-[85%] mx-auto">
+          <div class="aspect-[4/5] bg-primary/10 relative">
             <img src="../../public/TeamMembers/Thanu.jpg" alt="San Sengthanu" class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-2xl">SS</div>
+            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-xl">SS</div>
           </div>
-          <div class="px-5 py-4">
-            <div class="text-[11.5px] font-mono text-black/45 mb-1">Team · 03</div>
-            <div class="font-display font-bold text-[17px] text-primary mb-1">San Sengthanu</div>
-            <div class="font-mono text-[12.5px] font-semibold text-secondary mb-3">Member</div>
+          <div class="px-3.5 py-3">
+            <div class="text-[9px] font-mono text-black/45 mb-1">Team · 03</div>
+            <div class="font-display font-bold text-[13px] text-primary mb-1">San Sengthanu</div>
+            <div class="font-mono text-[10px] font-semibold text-secondary mb-2.5">Member</div>
             <div class="flex gap-2">
-              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
-              <a href="#" aria-label="Telegram" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
-              <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+              <a href="#" aria-label="Facebook" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+              <a href="#" aria-label="Telegram" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
+              <a href="#" aria-label="GitHub" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
-          <div class="aspect-[3/4] bg-primary/10 relative">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] max-w-[85%] mx-auto">
+          <div class="aspect-[4/5] bg-primary/10 relative">
             <img src="../../public/TeamMembers/Chamraoeun.jpg" alt="Savuth Sochamraouen" class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-2xl">SS</div>
+            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-xl">SS</div>
           </div>
-          <div class="px-5 py-4">
-            <div class="text-[11.5px] font-mono text-black/45 mb-1">Team · 04</div>
-            <div class="font-display font-bold text-[17px] text-primary mb-1">Savuth Sochamraouen</div>
-            <div class="font-mono text-[12.5px] font-semibold text-secondary mb-3">Member</div>
+          <div class="px-3.5 py-3">
+            <div class="text-[9px] font-mono text-black/45 mb-1">Team · 04</div>
+            <div class="font-display font-bold text-[13px] text-primary mb-1">Savuth Sochamraouen</div>
+            <div class="font-mono text-[10px] font-semibold text-secondary mb-2.5">Member</div>
             <div class="flex gap-2">
-              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
-              <a href="#" aria-label="Telegram" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
-              <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+              <a href="#" aria-label="Facebook" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+              <a href="#" aria-label="Telegram" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
+              <a href="#" aria-label="GitHub" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
-          <div class="aspect-[3/4] bg-primary/10 relative">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] max-w-[85%] mx-auto">
+          <div class="aspect-[4/5] bg-primary/10 relative">
             <img src="../../public/TeamMembers/Seavminh.jpg" alt="Leang Seavminh" class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-2xl">LS</div>
+            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-xl">LS</div>
           </div>
-          <div class="px-5 py-4">
-            <div class="text-[11.5px] font-mono text-black/45 mb-1">Team · 05</div>
-            <div class="font-display font-bold text-[17px] text-primary mb-1">Leang Seavminh</div>
-            <div class="font-mono text-[12.5px] font-semibold text-secondary mb-3">Member</div>
+          <div class="px-3.5 py-3">
+            <div class="text-[9px] font-mono text-black/45 mb-1">Team · 05</div>
+            <div class="font-display font-bold text-[13px] text-primary mb-1">Leang Seavminh</div>
+            <div class="font-mono text-[10px] font-semibold text-secondary mb-2.5">Member</div>
             <div class="flex gap-2">
-              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
-              <a href="#" aria-label="Telegram" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
-              <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+              <a href="#" aria-label="Facebook" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+              <a href="#" aria-label="Telegram" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
+              <a href="#" aria-label="GitHub" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)]">
-          <div class="aspect-[3/4] bg-primary/10 relative">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] max-w-[85%] mx-auto">
+          <div class="aspect-[4/5] bg-primary/10 relative">
             <img src="../../public/TeamMembers/Men%20Senghak.JPG" alt="Man Senghak" class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-2xl">MS</div>
+            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-xl">MS</div>
           </div>
-          <div class="px-5 py-4">
-            <div class="text-[11.5px] font-mono text-black/45 mb-1">Team · 06</div>
-            <div class="font-display font-bold text-[17px] text-primary mb-1">Man Senghak</div>
-            <div class="font-mono text-[12.5px] font-semibold text-secondary mb-3">Member</div>
+          <div class="px-3.5 py-3">
+            <div class="text-[9px] font-mono text-black/45 mb-1">Team · 06</div>
+            <div class="font-display font-bold text-[13px] text-primary mb-1">Man Senghak</div>
+            <div class="font-mono text-[10px] font-semibold text-secondary mb-2.5">Member</div>
             <div class="flex gap-2">
-              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
-              <a href="#" aria-label="Telegram" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
-              <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+              <a href="#" aria-label="Facebook" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+              <a href="#" aria-label="Telegram" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
+              <a href="#" aria-label="GitHub" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] sm:col-span-2 lg:col-span-1 sm:max-w-[calc(50%-0.75rem)] lg:max-w-none sm:mx-auto lg:mx-0">
-          <div class="aspect-[3/4] bg-primary/10 relative">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_45px_-30px_rgba(18,39,51,0.35)] max-w-[85%] mx-auto sm:col-span-2 lg:col-span-1 sm:max-w-[calc(42%-0.65rem)] lg:max-w-[85%] sm:mx-auto lg:mx-auto lg:col-start-2">
+          <div class="aspect-[4/5] bg-primary/10 relative">
             <img src="../../public/TeamMembers/Sitha.jpg" alt="Han Sitha" class="w-full h-full object-cover"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-2xl">HS</div>
+            <div class="hidden absolute inset-0 items-center justify-center bg-primary text-white font-display font-bold text-xl">HS</div>
           </div>
-          <div class="px-5 py-4">
-            <div class="text-[11.5px] font-mono text-black/45 mb-1">Team · 07</div>
-            <div class="font-display font-bold text-[17px] text-primary mb-1">Han Sitha</div>
-            <div class="font-mono text-[12.5px] font-semibold text-secondary mb-3">Member</div>
+          <div class="px-3.5 py-3">
+            <div class="text-[9px] font-mono text-black/45 mb-1">Team · 07</div>
+            <div class="font-display font-bold text-[13px] text-primary mb-1">Han Sitha</div>
+            <div class="font-mono text-[10px] font-semibold text-secondary mb-2.5">Member</div>
             <div class="flex gap-2">
-              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
-              <a href="#" aria-label="Telegram" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
-              <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+              <a href="#" aria-label="Facebook" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M14 9h3V6h-3a4 4 0 00-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z"/></svg></a>
+              <a href="#" aria-label="Telegram" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M22 3L2 10.5l6.5 2.3L11 20l3.3-4.6L19.5 19 22 3zM9.5 13.8l-1-3.3L17 6.5l-7.5 7.3z"/></svg></a>
+              <a href="#" aria-label="GitHub" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-secondary"><svg viewBox="0 0 24 24" fill="currentColor" class="w-2.5 h-2.5"><path d="M12 2a10 10 0 00-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.92.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
             </div>
           </div>
         </div>
@@ -712,11 +713,12 @@
 
         <div>
           <a href="../../index.html" class="flex items-center gap-2 mb-4">
-            <img src="../../public/images/PorExpress-Logo.png" alt="Por Express" class="h-12 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <img src="../../public/images/PorExpress-Logo.png" alt="Por Express" class="logo-light h-12 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
             <span class="hidden items-center gap-2 font-display font-bold text-lg text-white">
               <span class="w-6 h-6 rounded-md bg-secondary/25 flex items-center justify-center text-secondary text-xs font-mono">P</span>
               Por express
             </span>
+            <img src="../../public/images/Por-express-logo-darkmode.png" alt="Por Express" class="logo-dark h-12 w-auto" onerror="this.style.display='none'">
           </a>
           <p class="text-[13.5px] leading-relaxed text-accent/60 max-w-65 mb-5.5">Por Express is committed to delivering fast, secure, and reliable logistics solutions across Cambodia.</p>
           <div class="flex gap-2.5">
