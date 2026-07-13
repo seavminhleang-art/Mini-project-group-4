@@ -1,5 +1,0 @@
-[build]
-  # Compile Tailwind (src/input.css -> src/output.css) on every deploy
-  command = "npm run build"
-  # Static site: serve the repo root as-is
-  publish = "."
