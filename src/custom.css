@@ -38,3 +38,22 @@
   background-color: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.18);
 }
+
+/* Nav dropdowns: the panel sits 14px below its trigger pill. That gap
+   isn't part of any element, so moving the mouse straight down from
+   the pill into the menu briefly leaves the hoverable area and the
+   menu closes before you can reach it. This invisible ::before bridges
+   that gap (it's a child of .dropdown-panel, so hovering it keeps the
+   parent .nav-item's :hover / group-hover active) and slows the close
+   transition so it's not a hair-trigger. */
+.dropdown-panel {
+  transition-duration: 220ms !important;
+}
+.dropdown-panel::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
